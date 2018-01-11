@@ -101,5 +101,9 @@ rocket explosion. This was a consequence of ignoring whitespace. New programming
         * `if` is not recognized as a token
   * Identifiers
   * Keywords
-  * Reserved words (Ex. cannot create a variable called `if`)
+  * Reserved words (Ex. Cannot create a variable called `if`)
     * Violates mutability
+    * This makes it difficult to update programming languages with new keywords
+      * Ex. C11 `_Noreturn void exit(int);`, `_Noreturn` is a keyword here.
+      * Suppose you initialized a variable in C99 with a preceding underscore and capital letter. There may be problems compliling with C11.
+      
