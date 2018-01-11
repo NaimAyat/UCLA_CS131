@@ -96,4 +96,10 @@ rocket explosion. This was a consequence of ignoring whitespace. New programming
   * Operators (Ex. `-`, `+`, `--`)
     * Suppose we write `*a-----*b`
       * This means `((*a--)--)-(*b)`, which results in an error.
-    * Tokenization is greedy (left-to-right)
+  * Tokenization is greedy (left-to-right)
+      * `int iff;`
+        * `if` is not recognized as a token
+  * Identifiers
+  * Keywords
+  * Reserved words (Ex. cannot create a variable called `if`)
+    * Violates mutability
