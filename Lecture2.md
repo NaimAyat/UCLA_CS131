@@ -107,4 +107,10 @@ rocket explosion. This was a consequence of ignoring whitespace. New programming
       * Ex. C11 `_Noreturn void exit(int);`, `_Noreturn` is a keyword here.
       * Suppose you initialized a variable in C99 with a preceding underscore and capital letter. There may be problems compliling with C11.
   * Parser
-    * [![Uses a parse tree](http://harvey.binghamton.edu/~head/CS471/NOTES/GRAMMAR/ParseTree.gif)](http://harvey.binghamton.edu/~head/CS471/NOTES/GRAMMAR/ParseTree.gif)
+    * Uses a parse tree
+      * Needs a set of rules; a context-free grammar.
+        = start symbol
+        + finite set of nonterminal symbols
+        + finite set of terminal symbols (tokens)
+        + finite set of production rules, each looks like
+          nonterminal -> finite sequence of symbols
