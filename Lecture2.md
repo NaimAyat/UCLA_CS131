@@ -68,3 +68,13 @@
         * Ex. Does `a-b-c` mean `(a-b)-c` or `a-(b-c)'
           * Note that addition is associative in mathematics, but not in programming. Ex. Floating point addition rounds numbers, so order of addition can affect result.
 ## Tokens
+  * Basic building blocks of most programming languages
+  ```
+  #include <stdio.h>
+  int main(void) {
+    return !getchar(); }
+  ```
+  * In the code block above: include, int, main, (, void, ), {, return, !, getchar, (, ), ;, }, are all tokens.
+  * We have a scanner (lexer) that represents each token as a number. 
+  * Whitespace (not part of tokens in C; space, newline, return, tab, vertical tab)
+  * Comments are not part of tokens
