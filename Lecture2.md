@@ -30,8 +30,15 @@
     * "Good languages, therefore, must be able to evolve."
       * Ex. Simula 67 (language) failed to evolve
   * C code from last year:
-    `obj args[7];
+    ```
+    obj args[7];
     args[0] = [a];
     args[6] = [g];
-    foo (7, args);`
-  * C code now: `#define CALLN(...) CALLN(foo,a,...,g);`
+    foo (7, args);
+    ```
+  * C code now: 
+  ```
+  #define CALLN(...) CALLN(foo,a,...,g);
+  ```
+  * Steven Bourne (creator of Bourne shell)
+    * 
