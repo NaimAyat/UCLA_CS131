@@ -109,8 +109,8 @@ rocket explosion. This was a consequence of ignoring whitespace. New programming
   * Parser
     * Uses a parse tree
       * Needs a set of rules; a context-free grammar.
-        = start symbol
-        + finite set of nonterminal symbols
-        + finite set of terminal symbols (tokens)
-        + finite set of production rules, each looks like
+        \= start symbol
+        \+ finite set of nonterminal symbols
+        \+ finite set of terminal symbols (tokens)
+        \+ finite set of production rules, each looks like
           nonterminal -> finite sequence of symbols
