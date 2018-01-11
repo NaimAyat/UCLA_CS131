@@ -19,3 +19,5 @@
     * 16 KiB RAM
     * 1.2 nanoseconds memory cycle time
     * Accessing memory is fast; addition, subtraction, multiplication and division are slow
+    * Pointer dereferencing was relatively fast `*p`. Language syntax was designed to reflect speed.
+    * Ex. Now, `a[i]` is preferred over `*(a+i)`
