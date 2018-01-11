@@ -54,3 +54,13 @@
           * Syntactically and semantically correct. 
           * "Time" could be a noun or verb, "flies" is then either a verb or noun, respectively.
           * Ambiguity like this cannot exist in programming languages. The compiler cannot have multiple ways to interepret the same statement.
+    * Syntax issues
+      * Simplicity
+      * Familiarity. It's what people already know, like the statement `a+b/c`
+      * Readability
+        * Simplicity and readability are sometimes mutually exclusive. Ex. Reverse Polish Notation.
+      * Writability
+        * Ex. APL accepts non-standard keyboard characters to represent useful mathematical functions.
+        * It may be difficult to write concise code that is also readable.
+      * Redundancy
+      
