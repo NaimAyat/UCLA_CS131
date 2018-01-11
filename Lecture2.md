@@ -13,3 +13,9 @@
 * Mutability
   * Successful languages evolve
     * Ex. C++ is evolving (C++ 17)
+    * Syntax changes
+  * Ex. C circa 1975:
+    * 4 nanoseconds to add integers
+    * 16 KiB RAM
+    * 1.2 nanoseconds memory cycle time
+    * Accessing memory is fast; addition, subtraction, multiplication and division are slow
