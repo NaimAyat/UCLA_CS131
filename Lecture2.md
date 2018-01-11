@@ -85,3 +85,11 @@
   print(x);
   ```
   * The above code printed `12` because Danish terminals converts certain characters like `/` to Danish letters. `??/` was used to represent `\` in Danish terminals.
+  * Fortran ignores whitespace.
+  ```
+  DO 10 I = 1,100
+    CALL FOO(I)
+  10 END
+  ```
+  * Above is an example `for` loop in Fortran. The comma was mistakenly written as a period, causing Mariner 1
+rocket explosion. This was a consequence of ignoring whitespace. New programming languages, therefore, do not ignore whitespace in identifiers.
