@@ -31,9 +31,6 @@
       * Ex. Simula 67 (language) failed to evolve
   * C code from last year:
     `obj args[7];
-
     args[0] = [a];
-
-    args[6] = [a]
-
+    args[6] = [a];
     foo (7, args);`
