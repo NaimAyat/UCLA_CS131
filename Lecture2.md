@@ -32,5 +32,6 @@
   * C code from last year:
     `obj args[7];
     args[0] = [a];
-    args[6] = [a];
+    args[6] = [g];
     foo (7, args);`
+  * C code now: `#define CALLN(...) CALLN(foo,a,...,g);`
