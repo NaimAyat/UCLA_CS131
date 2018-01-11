@@ -21,3 +21,10 @@
     * Accessing memory is fast; addition, subtraction, multiplication and division are slow
     * Pointer dereferencing was relatively fast `*p`. Language syntax was designed to reflect speed.
     * Ex. Now, `a[i]` is preferred over `*(a+i)`
+  * GE 225 (1960s computer)
+    * 40 nanoseconds to add int
+    * 500 nanoseconds to divide int
+    * 40 KiB RAM
+    * Running BASIC
+    * "The programs we are writing now will be completely obsolete by the time your careers are over."
+    * "Good languages, therefore, must be able to evolve."
