@@ -46,4 +46,5 @@
   * Syntax
     * Rules + Parser
       * Spoken language is different; "form independent of meaning"
-        * "Colorless green ideas sleep furiously."
+        * "Colorless green ideas sleep furiously." - N. Chomsky
+          * Syntactically correct, but meaningless
