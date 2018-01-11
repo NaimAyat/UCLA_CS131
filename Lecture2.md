@@ -28,3 +28,4 @@
     * Running BASIC
     * "The programs we are writing now will be completely obsolete by the time your careers are over."
     * "Good languages, therefore, must be able to evolve."
+      * Ex. Simula 67 (language) failed to evolve
