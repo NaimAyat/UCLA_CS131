@@ -84,7 +84,7 @@
   x=20;
   print(x);
   ```
-  * The above code printed `12` because Danish terminals converts certain characters like `/` to Danish letters. `??/` was used to represent `\` in Danish terminals.
+  * The above code printed `12` because Danish terminals convert certain characters like `/` to Danish letters. `??/` was used to represent `\` in Danish terminals.
   * Fortran ignores whitespace.
   ```
   DO 10 I = 1,100
