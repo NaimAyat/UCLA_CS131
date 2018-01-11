@@ -43,3 +43,7 @@
     ```
   * Steven Bourne (creator of Bourne shell)
     * Wrote Bourne shell in C. Ex. `#define FI }`
+  * Syntax
+    * Rules + Parser
+      * Spoken language is different; "form independent of meaning"
+        * "Colorless green ideas sleep furiously."
