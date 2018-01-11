@@ -131,6 +131,6 @@ rocket explosion. This was a consequence of ignoring whitespace. New programming
         expression -> NUM
         expression -> (expression)
         ```
-  * Sentence = string
-  * Language = set of strings
-  * String = finite sequence of tokens
+    * Sentence = string
+    * Language = set of strings
+    * String = finite sequence of tokens
