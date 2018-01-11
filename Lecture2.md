@@ -74,7 +74,7 @@
   int main(void) {
     return !getchar(); }
   ```
-  * In the code block above: include, int, main, (, void, ), {, return, !, getchar, (, ), ;, }, are all tokens.
+  * In the code block above: `include`, `int`, `main`, `(`, `void`, `)`, `{`, `return`, `!`, `getchar`, `(`, `)`, `;`, `}`, are all tokens.
   * We have a scanner (lexer) that represents each token as a number. 
   * Whitespace (not part of tokens in C; space, newline, return, tab, vertical tab)
   * Comments are not part of tokens
