@@ -52,5 +52,5 @@
           * Syntactically incorrect, but meaning is understood
         * "Time flies."
           * Syntactically and semantically correct. 
-          * "Time" could be a noun or verb, "flies" is its inverse.
-          * Ambiguity like this cannot exist in programming languages.
+          * "Time" could be a noun or verb, "flies" is then either a verb or noun, respectively.
+          * Ambiguity like this cannot exist in programming languages. The compiler cannot have multiple ways to interepret the same statement.
