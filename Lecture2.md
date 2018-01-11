@@ -10,3 +10,6 @@
   * Errors/failures, unusual cases
 * Concurrency
   * Work well with programs running in parallel
+* Mutability
+ * Successful languages evolve
+   * Ex. C++ is evolving (C++ 17)
