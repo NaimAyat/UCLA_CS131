@@ -120,7 +120,7 @@ rocket explosion. This was a consequence of ignoring whitespace. New programming
         ```
         start = expression
         nt = {expression}
-        t = {NumID, *, +, (, )}
+        t = {NUM, *, +, (, )}
         r = {
         ```
       * Grammar:
