@@ -5,7 +5,7 @@
 * Simplicity
   * Compiletime vs. runtime
 * Convenience
-  * Ex. `<i=i+1>` is the same as `<i++>` in C
+  * Ex. `i=i+1` is the same as `i++` in C
 * Exceptions
   * Errors/failures, unusual cases
 * Concurrency
