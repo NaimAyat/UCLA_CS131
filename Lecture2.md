@@ -50,3 +50,7 @@
           * Syntactically correct, but meaningless
         * "Ireland has leprechauns galore." - P. Eggert
           * Syntactically incorrect, but meaning is understood
+        * "Time flies."
+          * Syntactically and semantically correct. 
+          * "Time" could be a noun or verb, "flies" is its inverse.
+          * Ambiguity like this cannot exist in programming languages.
