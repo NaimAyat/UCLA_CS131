@@ -78,3 +78,10 @@
   * We have a scanner (lexer) that represents each token as a number. 
   * Whitespace (not part of tokens in C; space, newline, return, tab, vertical tab)
   * Comments are not part of tokens
+  ```
+  x=12;
+  // Here's a comment *@!??/
+  x=20;
+  print(x);
+  ```
+  * The above code printed `12` because Danish terminals converts certain characters like `/` to Danish letters. `??/` was used to represent `\` in Danish terminals.
