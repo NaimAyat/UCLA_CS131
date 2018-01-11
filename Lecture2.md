@@ -93,3 +93,7 @@
   ```
   * Above is an example `for` loop in Fortran. The comma was mistakenly written as a period, causing Mariner 1
 rocket explosion. This was a consequence of ignoring whitespace. New programming languages, therefore, do not ignore whitespace in identifiers.
+  * Operators (Ex. `-`, `+`, `--`)
+    * Suppose we write `*a-----*b`
+      * This means `((*a--)--)-(*b)`, which results in an error.
+    * Tokenization is greedy (left-to-right)
