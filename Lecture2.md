@@ -48,3 +48,5 @@
       * Spoken language is different; "form independent of meaning"
         * "Colorless green ideas sleep furiously." - N. Chomsky
           * Syntactically correct, but meaningless
+        * "Ireland has leprechauns galore." - P. Eggert
+          * Syntactically incorrect, but meaning can be understood
