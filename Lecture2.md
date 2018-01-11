@@ -37,8 +37,9 @@
     foo (7, args);
     ```
   * C code now: 
-  ```
-  #define CALLN(...) CALLN(foo,a,...,g);
-  ```
+    ```
+    #define CALLN(...) 
+      CALLN(foo,a,...,g);
+    ```
   * Steven Bourne (creator of Bourne shell)
     * 
