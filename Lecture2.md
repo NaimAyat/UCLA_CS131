@@ -63,4 +63,8 @@
         * Ex. APL accepts non-standard keyboard characters to represent useful mathematical functions.
         * It may be difficult to write concise code that is also readable.
       * Redundancy
-      
+        * Ex. Closing parentheses in mathematical expressions are redundant, but useful for readability and error detection.
+      * Ambiguity
+        * Ex. Does `a-b-c` mean `(a-b)-c` or `a-(b-c)'
+          * Note that addition is associative in mathematics, but not in programming. Ex. Floating point addition rounds numbers, so order of addition can affect result.
+## Tokens
