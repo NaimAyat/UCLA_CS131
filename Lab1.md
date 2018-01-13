@@ -79,3 +79,26 @@ let findMax x y = if x > y then x else y;;
 val max : 'a -> 'a -> 'a = <fun>
 ```
 * `'a` is a *type variable*. In other words, the function can handle any input type.
+### Creating .ml Files
+* Don't need `;;` after each line, only necessary in command line
+### Anonymous Functions
+```
+let double = fun x -> x * x;;
+val double : int -> int = <fun>
+```
+* Can define throwaway functions to use in single terminal command
+### Lists
+* Empty list `[]`
+```
+# let list1 = [];;
+val list1: 'a list = []
+```
+```
+# let list2 = [1; 2; 3];;
+val list2 : int list = [1; 2; 3]
+```
+* To append, use `::`
+```
+1 :: [];;
+- : int list = [1]
+```
