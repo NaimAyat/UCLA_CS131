@@ -119,3 +119,12 @@ val mysteryLst : int list = [1; 2; 3; 4; 5]
   | x::xs -> x
 - : int = 1
 ```
+##### Example
+* Write a function `length` to find the length of a list
+```
+# let rec list = match list with
+  | [] -> 0 
+  | x::xs -> (length xs) + 1;;
+val length : 'a list -> int = <fun>
+```
+* Note that we have to use `let rec` when defining a recursive function
