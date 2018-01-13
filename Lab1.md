@@ -67,3 +67,8 @@ val doubleMe : int -> int = <fun>
 # doubleMe 5;;
 - : int = 10
 ```
+#### Multiple Argument Functions
+```
+# let doubleUs x y = x*2 + y*2;;
+val doubleUs : int -> int -> int = <funct>
+```
