@@ -102,3 +102,8 @@ val list2 : int list = [1; 2; 3]
 # 1 :: [];;
 - : int list = [1]
 ```
+* To concatenate: use `@`
+```
+# [1; 2; 3] @ [4; 5; 6]
+- : int list = [1; 2; 3; 4; 5; 6]
+```
