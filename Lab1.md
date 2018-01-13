@@ -16,6 +16,7 @@
   * More terse and easier to reason about
 * Used widely in industry
 * No pointers/objects in this class
+### Variable Assignment & Basic Operations
 * A program is a sequence of bindings
   ```
   let x = 5
