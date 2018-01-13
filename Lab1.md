@@ -99,6 +99,6 @@ val list2 : int list = [1; 2; 3]
 ```
 * To append, use `::`
 ```
-1 :: [];;
+# 1 :: [];;
 - : int list = [1]
 ```
