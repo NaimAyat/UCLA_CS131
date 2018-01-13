@@ -72,3 +72,10 @@ val doubleMe : int -> int = <fun>
 # let doubleUs x y = x*2 + y*2;;
 val doubleUs : int -> int -> int = <funct>
 ```
+#### Example
+* Define a function that takes two integer arguments and returns the higher value
+```
+let findMax x y = if x > y then x else y;;
+val max : 'a -> 'a -> 'a = <fun>
+```
+* `'a` is a "type variable". In other words, the function can handle any input type.
