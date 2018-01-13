@@ -1,1 +1,18 @@
 # Lab 1 (January 12, 2018)
+## Logistics
+* sakekasi@ucla.edu
+* OH: Mon/Tues 9:30-10:30 @ Boelter 2432
+## OCaml
+* Install at https://ocaml.org
+* Or use SEASnet installation
+  * http://www.seasnet.ucla.edu/lnxsrv/
+  * use lnxsrv06, lnxsrv07, lnxsrv09
+* Recommended text: https://realworldocaml.org
+* Static typing
+  * Catches lots of programmer errors at compile time
+* Typer inference
+  * The system figures out type annotations for you
+* Functional programming
+  * More terse and easier to reason about
+* Used widely in industry
+* No pointers/objects in this class
