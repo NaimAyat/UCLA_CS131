@@ -78,4 +78,4 @@ val doubleUs : int -> int -> int = <funct>
 let findMax x y = if x > y then x else y;;
 val max : 'a -> 'a -> 'a = <fun>
 ```
-* `'a` is a "type variable". In other words, the function can handle any input type.
+* `'a` is a *type variable*. In other words, the function can handle any input type.
