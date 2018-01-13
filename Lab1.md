@@ -32,7 +32,12 @@
 ```
 * `+` operator only can add ints. `+.` operator can only add floats.
 ```
-# 2.0 + 15.0
+# 2.0 +. 15.0
   ;;
 - : float = 17
+```
+* To assign variables, use `let`
+```
+# let d = true;;
+val d : bool = true
 ```
