@@ -24,3 +24,15 @@
   ```
 * Evaluate the expression to the right in the environment created by the previous bindings. Bind the variable on the left to the value of the expression on the right.
 * You cannot re-define variables.
+* Each statement ends with two semicolons.
+```
+# 2 + 15
+  ;;
+- : int = 17
+```
+* `+` operator only can add ints. `+.` operator can only add floats.
+```
+# 2.0 + 15.0
+  ;;
+- : float = 17
+```
