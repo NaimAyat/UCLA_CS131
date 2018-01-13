@@ -4,7 +4,7 @@
 * OH: Mon/Tues 9:30-10:30 @ Boelter 2432
 ## OCaml
 * Install at https://ocaml.org
-* Or use SEASnet installation
+* Or use SEASnet installation (UCLA-specific)
   * http://www.seasnet.ucla.edu/lnxsrv/
   * use lnxsrv06, lnxsrv07, lnxsrv09
 * Recommended text: https://realworldocaml.org
@@ -16,3 +16,11 @@
   * More terse and easier to reason about
 * Used widely in industry
 * No pointers/objects in this class
+* A program is a sequence of bindings
+```
+let x = 5
+let y = x + 1
+let z = x * y
+```
+* Evaluate the expression to the right in the environment created by the previous bindings. Bind the variable on the left to the value of the expression on the right.
+* You cannot re-define variables.
