@@ -59,3 +59,11 @@ Error: This expression has type int but an expression was expected of type strin
 let doubleMe x = x + x;;
 val doubleMe : int -> int = <fun>
 ```
+```
+# doubleMe(5);;
+- : int = 10
+```
+```
+# doubleMe 5;;
+- : int = 10
+```
