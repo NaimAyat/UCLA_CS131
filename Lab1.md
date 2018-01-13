@@ -16,7 +16,7 @@
   * More terse and easier to reason about
 * Used widely in industry
 * No pointers/objects in this class
-### Variable Assignment & Basic Operations
+### Variable Assignment & Arithmetic
 * A program is a sequence of bindings
   ```
   let x = 5
@@ -41,4 +41,21 @@
 ```
 # let d = true;;
 val d : bool = true
+```
+### Conditionals
+* Use `if` in the style of C ternary operator
+```
+# if true then 1 else 0;;
+- : int = 1
+```
+* OCaml expects the `if` and `then` expressions to have the same type
+```
+# if 1 < 2 then "less" else 3;;
+Error: This expression has type int but an expression was expected of type string
+```
+### Functions
+* Use `let`
+```
+let doubleMe x = x + x;;
+val doubleMe : int -> int = <fun>
 ```
