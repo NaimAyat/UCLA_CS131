@@ -107,3 +107,15 @@ val list2 : int list = [1; 2; 3]
 # [1; 2; 3] @ [4; 5; 6]
 - : int list = [1; 2; 3; 4; 5; 6]
 ```
+#### Matching
+* `match` accepts cases in the style of a C `switch` statement
+```
+# let mysteryList = [1;2;3;4;5]
+val mysteryLst : int list = [1; 2; 3; 4; 5]
+```
+```
+# match mysteryList with
+  | [] -> -1
+  | x::xs -> x
+- : int = 1
+```
