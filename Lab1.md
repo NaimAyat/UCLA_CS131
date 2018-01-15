@@ -128,3 +128,8 @@ val mysteryLst : int list = [1; 2; 3; 4; 5]
 val length : 'a list -> int = <fun>
 ```
 * Note that we have to use `let rec` when defining a recursive function
+### Load Code into Toplevel (Interpreter)
+* Specify the file name in the `#use` directive
+```
+# #use "myfile.ml";;
+```
