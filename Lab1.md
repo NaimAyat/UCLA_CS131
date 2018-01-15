@@ -122,7 +122,7 @@ val mysteryLst : int list = [1; 2; 3; 4; 5]
 ##### Example
 * Write a function `length` to find the length of a list
 ```
-# let rec list = match list with
+# let rec length = match list with
   | [] -> 0 
   | x::xs -> (length xs) + 1;;
 val length : 'a list -> int = <fun>
