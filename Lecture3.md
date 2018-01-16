@@ -43,3 +43,16 @@
     qtext = <any CHAR except " \ CR> 
     quoted=pair = "\" CHAR
     ```
+    * [ISO standard for EVNF](http://www.cl.cam.ac.uk/~mgk25/iso-ebnf.html)
+    ```
+    [options]
+    {repetition}
+    [grouping]
+    (*comment*)
+    x* (repetition)
+    x-y (except)
+    x,y (concatenate)
+    x|y (or)
+    = (defn in a rule)
+    ; (end of rule)
+    ```
