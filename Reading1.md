@@ -50,4 +50,4 @@
 ```
 #### Parse Trees
 * Think of the grammar as a set of rules that say how to build a tree. `<S>` is the root, and the grammar tells how children can be added at any point (node) on the tree.
-* Example parse tree from the example above
+* [Example parse tree from the example above](Images/parseTree.png)
