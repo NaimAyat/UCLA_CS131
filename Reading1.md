@@ -16,3 +16,35 @@
 ### 1.5 Connections
 * It is best to adapt programming style to the language in use (ex. write many small functions in ML, use objects in Java)
 ## Chapter 2
+### 2.1 Introduction
+* Syntax - defines program form and structure
+* Semantics - defines what programs do; their behavior and meaning
+### 2.2 A Grammar Example for English
+* We use the symbol `<A>` for article and express our definition:
+```
+<A> ::= a | the
+```
+* Similarly, the words `dog`, `cat` are nouns:
+```
+<N> ::= dog | cat
+```
+* A noun phrase is an article followed by a noun:
+```
+<NP> ::= <A> <N>
+```
+* Now, we define verbs:
+```
+<V> ::= loves | hates | eats
+```
+* A sentence is a noun phrase, followed by a verb, followed by another noun phrase:
+```
+<S> ::= <NP> <V> <NP>
+```
+* Combining these definitions, we have a grammar that defines a small subset of unpunctuated English.
+```
+<A> ::= a | the
+<N> ::= dog | cat
+<NP> ::= <A> <N>
+<V> ::= loves | hates | eats
+<S> ::= <NP> <V> <NP>
+```
