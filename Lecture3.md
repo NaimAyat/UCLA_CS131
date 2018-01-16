@@ -36,3 +36,11 @@
     ```
     msg-id = "<" word *("."word) "@" atom* ("." atom) ">"
     ```
+    ```
+    word = atom / quoted-string
+    atom = 1*<any CHAR except specials, SPACE, and CTLs>
+    quoted-string = <"> *(qtext / quoted-pair) <">
+    qtext = <any CHAR except " \ CR> 
+    quoted=pair = "\" CHAR
+    ```
+    Wherein `/` represents `OR` and specials are `()<>@;:\'"[]`
