@@ -42,11 +42,11 @@
 ```
 * Combining these definitions, we have a grammar that defines a small subset of unpunctuated English.
 ```
+<S> ::= <NP> <V> <NP>
+<NP> ::= <A> <N>
 <A> ::= a | the
 <N> ::= dog | cat | rat
-<NP> ::= <A> <N>
 <V> ::= loves | hates | eats
-<S> ::= <NP> <V> <NP>
 ```
 #### Parse Trees
 * Think of the grammar as a set of rules that say how to build a tree. `<S>` is the root, and the grammar tells how children can be added at any point (node) on the tree.
@@ -59,3 +59,10 @@
 * [Here is a parse tree for the expression `((a + b) * c)`](Images/parseTree2.PNG)
   * Unlike the example of English grammar; this defines an infinite language. Expressions can be arbitrarily long. It is arecursive grammar; an `<exp>` node can occur as the descendant of another `<exp>` node in the parse tree
 * Finding a parse tree for a given string is called *parsing* the string
+### Definition of Grammars: Backus-Naur Form
+* A grammar has four main components:
+  1. Tokens
+  2. Non-terminal symbols
+  3. Productions
+  4. Start symbol (non-terminal)
+  * In our English example, the start symbol is `<S>`; production is `<NP>`; non-terminal symbols are `<V>`, `<N>`, `<A>`; tokens are `loves`, `hates`, `eats`, `dog`, `cat`, `rat`, `a`, `the`
