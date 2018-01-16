@@ -25,3 +25,4 @@
 * Discover and Fix Ambiguity
   * Prove that a single string can produce two or more parses
   * Rewrite grammar to have associativity constraints (ex. left-associative operator)
+  * Rewrite grammar to have precedence tules (ex. multiplication before addition)
