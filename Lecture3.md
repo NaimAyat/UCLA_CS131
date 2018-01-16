@@ -32,7 +32,7 @@
     * Recall
       * `x*` zero or more `x`s in a sequence
       * `x+` one or more `x`s in a row
-    * Used for RFC 5322 (Internet message format)
+    * Used for RFC 5322 (Internet message format). Where `/` represents `OR` and specials are `()<>@;:\'"[]`:
     ```
     msg-id = "<" word *("."word) "@" atom* ("." atom) ">"
     ```
@@ -43,4 +43,3 @@
     qtext = <any CHAR except " \ CR> 
     quoted=pair = "\" CHAR
     ```
-    Wherein `/` represents `OR` and specials are `()<>@;:\'"[]`
