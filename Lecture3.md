@@ -56,3 +56,8 @@
     = (defn in a rule)
     ; (end of rule)
     ```
+    ```
+    syntax = syntax rule, {syntax rule};
+    syntax rule = meta id, "=", defns list, ";";
+    defns list = defn, {"|", defn};
+    ```
