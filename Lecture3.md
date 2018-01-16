@@ -13,3 +13,12 @@
   * 1 token = 1 character
     * Using grammars to specify details best handled by technology
   * Ambiguous grammars
+    ```
+    E -> E + E
+    E -> E * E
+    E -> ID
+    E -> NUM
+    E -> (E)
+    ```
+      * A terminal sandwiched between nonterminals indicates trouble (ex. `E + E` or `E * E`)
+      
