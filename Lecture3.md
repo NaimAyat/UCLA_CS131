@@ -12,7 +12,7 @@
   * Trying to use grammar to capture constraints that are best captured elsewhere
   * 1 token = 1 character
     * Using grammars to specify details best handled by technology
-  * Ambiguous grammars ([example](images/ambiguous.jpg))
+  * Ambiguous grammars ([example](Images/ambiguous.jpg))
     ```
     E -> E + E
     E -> E * E
