@@ -62,12 +62,18 @@
 ### Definition of Grammars: Backus-Naur Form
 * A grammar has four main components:
   1. Tokens
-    * The smallest units of syntax. They are the strings and symbols that we choose not to think of as consisting of smaller parts. (ex. `if`, `!=`)
+     * The smallest units of syntax. They are the strings and symbols that we choose not to think of as consisting of smaller parts. (ex. `if`, `!=`)
   2. Non-terminal symbols
-    * Strings enclosed in `<>` (ex. statements and expressions)
+     * Strings enclosed in `<>` (ex. statements and expressions)
   3. Productions
-    * The left-hand side, the separator `::=`, and a right-hand side. The left side is a single non-terminal symbol; the right side is a sequence of one or more things, each of which can either be a token or a non-terminal symbol.
-    * Give one possible way of building a parse tree; permits the non0terminal symbol on the left-hand side to have the symbols on the right-hand side, in order, as its children in a parse tree
+     * The left-hand side, the separator `::=`, and a right-hand side. The left side is a single non-terminal symbol; the right side is a sequence of one or more things, each of which can either be a token or a non-terminal symbol.
+     * Give one possible way of building a parse tree; permits the non0terminal symbol on the left-hand side to have the symbols on the right-hand side, in order, as its children in a parse tree
   4. Start symbol (non-terminal)
-    * Non-terminal symbol designated by the grammar. This is the root of the parse tree.
+     * Non-terminal symbol designated by the grammar. This is the root of the parse tree.
   * In our English example, the start symbol is `<S>`; production is `<NP>`; non-terminal symbols are `<V>`, `<N>`, `<A>`; tokens are `loves`, `hates`, `eats`, `dog`, `cat`, `rat`, `a`, `the`
+  * The special non-terminal symbol `empty` is sometimes used where the grammar needs to generate an empty string, a string of no tokens. For instance, an `if-then` statement with an optional else might be defined like this:
+  ```
+  <if-stmt> ::= if <expr> then <stmt> <else-part>
+  <else-part> ::= else <stmt> | <empty>
+  ```
+### 2.5 Writing Grammars
