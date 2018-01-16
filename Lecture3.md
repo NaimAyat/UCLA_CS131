@@ -29,6 +29,10 @@
 * Multiple Notations for Grammars
   * BNF (Backus–Naur form)
   * EBNF (Extended BNF)
-    * x* zero or more xs in a sequence
-    * x+ one or more xs in a row
-    
+    * Recall
+      * `x*` zero or more `x`s in a sequence
+      * `x+` one or more `x`s in a row
+    * Used for RFC 5322 (Internet message format)
+    ```
+    msg-id = "<" word *("."word) "@" atom* ("." atom) ">"
+    ```
