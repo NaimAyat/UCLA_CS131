@@ -26,3 +26,9 @@
   * Prove that a single string can produce two or more parses
   * Rewrite grammar to have associativity constraints (ex. left-associative operator)
   * Rewrite grammar to have precedence tules (ex. multiplication before addition)
+* Multiple Notations for Grammars
+  * BNF (Backus–Naur form)
+  * EBNF (Extended BNF)
+    * x* zero or more xs in a sequence
+    * x+ one or more xs in a row
+    
