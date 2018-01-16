@@ -51,3 +51,8 @@
 #### Parse Trees
 * Think of the grammar as a set of rules that say how to build a tree. `<S>` is the root, and the grammar tells how children can be added at any point (node) on the tree.
 * [Example parse tree from the example above](Images/parseTree.PNG)
+### A Grammar Example for a Programming Language
+* Here is an example of a grammar for a simple language of expressions with three variables:
+```
+<exp> ::= <exp> + <exp> | <exp> * <exp> | ( <exp> ) | a | b | c
+```
