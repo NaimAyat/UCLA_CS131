@@ -26,7 +26,7 @@
 ```
 * Similarly, the words `dog`, `cat` are nouns:
 ```
-<N> ::= dog | cat
+<N> ::= dog | cat | rat
 ```
 * A noun phrase is an article followed by a noun:
 ```
@@ -43,8 +43,11 @@
 * Combining these definitions, we have a grammar that defines a small subset of unpunctuated English.
 ```
 <A> ::= a | the
-<N> ::= dog | cat
+<N> ::= dog | cat | rat
 <NP> ::= <A> <N>
 <V> ::= loves | hates | eats
 <S> ::= <NP> <V> <NP>
 ```
+#### Parse Trees
+* Think of the grammar as a set of rules that say how to build a tree. `<S>` is the root, and the grammar tells how children can be added at any point (node) on the tree.
+* Example parse tree from the example above
