@@ -51,7 +51,7 @@
 #### Parse Trees
 * Think of the grammar as a set of rules that say how to build a tree. `<S>` is the root, and the grammar tells how children can be added at any point (node) on the tree.
 * [Example parse tree from the example above](Images/parseTree.PNG)
-### A Grammar Example for a Programming Language
+### 2.3 A Grammar Example for a Programming Language
 * Here is an example of a grammar for a simple language of expressions with three variables:
 ```
 <exp> ::= <exp> + <exp> | <exp> * <exp> | ( <exp> ) | a | b | c
@@ -59,7 +59,7 @@
 * [Here is a parse tree for the expression `((a + b) * c)`](Images/parseTree2.PNG)
   * Unlike the example of English grammar; this defines an infinite language. Expressions can be arbitrarily long. It is arecursive grammar; an `<exp>` node can occur as the descendant of another `<exp>` node in the parse tree
 * Finding a parse tree for a given string is called *parsing* the string
-### Definition of Grammars: Backus-Naur Form
+### 2.4 Definition of Grammars: Backus-Naur Form
 * A grammar has four main components:
   1. Tokens
      * The smallest units of syntax. They are the strings and symbols that we choose not to think of as consisting of smaller parts. (ex. `if`, `!=`)
