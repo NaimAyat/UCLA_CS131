@@ -56,4 +56,4 @@
 ```
 <exp> ::= <exp> + <exp> | <exp> * <exp> | ( <exp> ) | a | b | c
 ```
-* (Here is a parse tree for the expression `((a + b) * c)`)[Images/parseTree2.PNG]
+* [Here is a parse tree for the expression `((a + b) * c)`](Images/parseTree2.PNG)
