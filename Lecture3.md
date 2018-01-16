@@ -22,3 +22,6 @@
     ```
       * A terminal sandwiched between nonterminals indicates trouble (ex. `E + E` or `E * E`)
       
+* Discover and Fix Ambiguity
+  * Prove that a single string can produce two or more parses
+  * Rewrite grammar to have associativity constraints (ex. left-associative operator)
