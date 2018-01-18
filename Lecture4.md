@@ -11,14 +11,16 @@
     x*
     ```
   * Syntax diagrams
+* Grammars lead to generator, recognizers/parsers
+* Finite state machine + stack = push-down automaton
+
 ### Example: Scheme Syntax for Conditional Expression
-* EBNF
+* EBNF example:
 ```
 <cond> -> (cond <cond clause>+)
           | (cond <cond clause>* (else <sequence>))
 ```
 * [Syntax diagram equivalent of above example](Images/syntaxDiagram.jpg)
-* Grammars lead to generator, recognizers/parsers
 * Parser example:
   ```
   parse_cond() {
@@ -33,5 +35,4 @@
       while(...)
     }
   ```
-* Finite state machine + stack = push-down automaton
 
