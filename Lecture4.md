@@ -47,3 +47,13 @@
   1. Recursion
   2. Alternation (OR)
   3. Concatenation (easy for finite state machines)
+### Expressions and their Problems
+* Handled by grammars:
+  * Precedence
+  * Associativity
+    * Prolog lets you define your own operators
+## Functional Programming
+* Motivations
+  1. Clarity
+     * Centuries of experience; taught to children
+     * Ex: `i = i+1` is false in mathematics
