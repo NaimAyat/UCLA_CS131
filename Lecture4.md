@@ -37,4 +37,9 @@
       while(...)
     }
   ```
-
+#### Homework 2 Outline
+Write a function where:
+  * Input is a grammar
+  * Output is another function that is a parser
+    * Input to parser is another token sequence
+    * Parser outputs whether token sequence is part of grammar
