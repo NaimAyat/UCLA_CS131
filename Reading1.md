@@ -92,3 +92,7 @@
   * Modern (Java, C)
   * Could theoretically write every program in a single line
 * Some languages are a mixture of fixed- and free-format (ex. Python)
+### 2.7 Other Grammar Forms
+* BNF (Backus-Naur Form) variations
+  * `=` or `->` can be used in place of `::=`
+  * *Metasymbols* are part of the language of the definition, not the language being defined (ex. `<`, `>`, `|`, or `::=`)
