@@ -57,3 +57,12 @@
   1. Clarity
      * Centuries of experience; taught to children
      * Ex: `i = i+1` is false in mathematics
+  2. Performance
+     * Escame from von Neumann bottleneck
+ * Function
+   * Mapping from a domain to a range
+ * Functional forms
+   * Function where domain or range includes functions
+   * Ex. `SIGMA(plus, 0, 100)`
+   * No assignment statements
+   * No side effects
