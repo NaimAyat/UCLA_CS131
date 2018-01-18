@@ -13,7 +13,7 @@
   * Syntax diagrams
 * Grammars lead to generator, recognizers/parsers
 * Finite state machine + stack = push-down automaton
-
+* [Some grammars don't need a stack](stacklessGrammar.jpg)
 ### Example: Scheme Syntax for Conditional Expression
 * EBNF example:
 ```
