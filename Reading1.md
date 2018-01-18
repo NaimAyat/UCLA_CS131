@@ -96,3 +96,7 @@
 * BNF (Backus-Naur Form) variations
   * `=` or `->` can be used in place of `::=`
   * *Metasymbols* are part of the language of the definition, not the language being defined (ex. `<`, `>`, `|`, or `::=`)
+* EBNF (Extened BNF) adds `[`, `]`, `{`, `}`, `(`, `)`
+  * `[something]` in the right-hand side of a production means that the `something` inside is optional
+  * `{something}` in the right-hand side of a production means that the `something` can be repeated zero or more times
+  * Parentheses group things on the RHS so that `|`, `[]`, and `{}` can be used unambiguously
