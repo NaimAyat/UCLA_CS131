@@ -77,3 +77,18 @@
   <else-part> ::= else <stmt> | <empty>
   ```
 ### 2.5 Writing Grammars
+* Divide and conquer
+* BNF example for Java subset
+  ```
+  <var-dec> ::= <type-name> <declarator-list> ;
+  <type-name> ::= boolean | byte | short | int | long | char | float | double
+  <declarator-list> ::= <declarator> | <declarator> , <declarator-list>
+  <declarator> ::= <variable-name> | <variable-name> = <expr>
+  ```
+### 2.6 Lexical Structure and Phrase Structure
+* *Fixed-format* lexical structure - some columns in each line have special significance
+  * Archaic (original Fortran, Cobol, Basic)
+* *Free-format* lexical structure - columns have no significance
+  * Modern (Java, C)
+  * Could theoretically write every program in a single line
+* Some languages are a mixture of fixed- and free-format (ex. Python)
