@@ -14,6 +14,8 @@
 * Grammars lead to generator, recognizers/parsers
 * Finite state machine + stack = push-down automaton
 * [Some grammars don't need a stack](stacklessGrammar.jpg)
+  * AKA: regular expressions
+    * A finite state machine is enough
 ### Example: Scheme Syntax for Conditional Expression
 * EBNF example:
 ```
