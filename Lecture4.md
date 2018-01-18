@@ -43,3 +43,7 @@
   * Output is another function that is a parser
     * Input to parser is another token sequence
     * Parser outputs whether token sequence is part of grammar
+* Three key features:
+  1. Recursion
+  2. Alternation (OR)
+  3. Concatenation (easy for finite state machines)
