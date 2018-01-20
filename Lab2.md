@@ -6,5 +6,18 @@
 ### Tuples
 Unlike lists, tuples can contain mixed types. However, they have fixed length.
 ```
-# let tuple = (1, "hello");;
+# let myTuple = (1, "hello");;
 ```
+### Tail Recursion
+* Regular recursive example:
+  ```
+  # let rec filter list predicate -> match list with
+    | [] -> []
+    | h::t -> if predicate h then h::(filter t predicate) else filter t predicate
+  ```
+* Tail recursive equivalent:
+  ```
+  # let rec filter2 l p aggregate = match l with
+    | [] -> aggregate
+    | h::t -> if p h then (filter t p (h::aggregate)) else (filter t p aggregate)
+  ```
