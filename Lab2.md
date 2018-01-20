@@ -4,7 +4,7 @@
 * Type erasure -> most type info is erased before program is run
 * Type inference -> system figures out type annotations for you
 ### Tuples
-Unlike lists, can contain mixed types.
+Unlike lists, tuples can contain mixed types. However, they are of fixed length.
 ```
 # let tuple = (1, "hello");;
 ```
