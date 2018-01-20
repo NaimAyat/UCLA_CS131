@@ -28,4 +28,4 @@ Unlike lists, tuples can contain mixed types. However, they have fixed length.
 * Rule - a list of symbols that can replace a nonterminal symbol
 * Grammar - a starting symbol and a set of rules that describe which symbols can be derived from a nonterminal
 ## Derivations
-* Phrase/Fragment: a list of terminal values (ex. `["3";"+";"4"]
+* Phrase/Fragment: a list of terminal values (ex. `["3";"+";"4"]`)
