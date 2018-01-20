@@ -21,3 +21,9 @@ Unlike lists, tuples can contain mixed types. However, they have fixed length.
     | [] -> aggregate
     | h::t -> if p h then (filter t p (h::aggregate)) else (filter t p aggregate)
   ```
+## Grammars
+* Way to describe which strings are and aren't valid for a language
+* Terminal symbol - a symbol that can't be replaced with other symbols
+* Nonterminal symbol - a symbol that can be replaced with other symbols
+* Rule - a list of symbols that can replace a nonterminal symbol
+* Grammar - a starting symbol and a set of rules that describe which symbols can be derived from a nonterminal
