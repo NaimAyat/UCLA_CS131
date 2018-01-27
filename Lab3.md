@@ -8,6 +8,7 @@
 ```
 let make_nucleotide_matcher nucleotide fragment acceptor = match fragment
 | [] -> None
-| x::xs -> 
+| x::xs -> if x = nucleotide then acceptor xs else None
 
 (make_nucleotide_matcher A)
+```
