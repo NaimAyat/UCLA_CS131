@@ -10,5 +10,14 @@ let make_nucleotide_matcher nucleotide fragment acceptor = match fragment
 | [] -> None
 | x::xs -> if x = nucleotide then acceptor xs else None
 
+let rec make_fragment_matcher frag fragment acceptor = match frag with 
+| [] -> acceptor fragment
+| x::xs -> (match fragment with
+  | [] -> None
+  | n::ns -> let result = make_nucleotide_matcher x [n] accept_empty in 
+    match result with
+    | Some _ -> make_fragment_matcher xs ns acceptor
+    | None -> None)
+  
 (make_nucleotide_matcher A)
 ```
