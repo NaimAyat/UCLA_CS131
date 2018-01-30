@@ -81,3 +81,5 @@
    * 93 petaFLOPS
    * 15.37 megaWatts
      * 6 gigaFLOPS per Watt
+   * 1.3 PB RAM
+   * How do we write code for this computer; computers of the future?
