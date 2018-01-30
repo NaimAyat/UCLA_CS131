@@ -71,3 +71,11 @@
   2. Generics
      * Only one copy of the compiled code; checked generically
 ## Parallelism
+* Tianhe-2: world's fastest computer
+  * 40960 nodes
+    * Each contains a SW26010 processor
+      * Each 4 CPU clusters
+        * Each 64 compute CPUs
+          * Each 1 management CPUs
+   * 10649600 cones
+     * 93 petaFlops
