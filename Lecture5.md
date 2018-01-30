@@ -22,6 +22,7 @@
   * Structural equivalence: types are the same if their layout or operations are the same
     * Layout: applies to exposed-type languages
     * Operations: applies to languages with information hiding
+  * Basically, given two types, T<sub>1</sub> and T<sub>2</sub>, is T<sub>1</sub> ≡ T<sub>2</sub>?
     ```
     struct s {int val; struct t*next;};
     struct t {int val; struct s*next;};
@@ -34,6 +35,11 @@
     a = b;
     ```
   * Name equivalence: must have same names
+* Subtypes
+  * Ex. Subclasses in C++ or Java
+  * Given two types, T<sub>1</sub> and T<sub>2</sub>, is T<sub>1</sub> a subset of T<sub>2</sub>?
+  * `int` is a subset of `long` in C
+  * `char*` is a subset of `char const*`
 
 
 ## Java
