@@ -41,7 +41,7 @@
   * `int` is a subtype of `long` in C
   * `char*` is not a subtype of `char const*`
     * Can do both loads and stores on `char*`; can only do loads on `char const*`
-    * Inverse is true, then. `char const*` ⊆ `char*`
+    * Inverse is true: `char const*` ⊆ `char*`
 
 
 ## Java
