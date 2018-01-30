@@ -13,7 +13,10 @@
 * Strongly-typed languages: you cannot escape type checking
   * Ex. OCaml is strongly typed. C is not; you can subvert type checking with pointers.
     ```
-    
+    char buf[100]'
+    void *p = buf;
+    int *ip = p;
+    p[0] = 27;
     ```
 * Type equivalence
   * Structural equivalence: types are the same if their layout or operations are the same
