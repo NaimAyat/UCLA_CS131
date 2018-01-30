@@ -49,7 +49,7 @@
     * Implementation identified by looking at arguments
   * In C (not polymorphic):
     * There are different `sin` functions for each argument type: `sin`, `sinf`, etc.
-#### "Ad-Hoc" Polymorphism
+#### "Ad-Hoc" Polymorphism ("Hack-y")
 * Overloading: identify implementation by looking at argument types or result type
   * Ex. `double x = sin(10);`
     * `x` is a double; `sin` is an int
@@ -61,6 +61,9 @@
   x = 3;            // implicit coercion (coercion)
   y = (double) 5;   // explicit coercion (casting)
   ```
+#### Universal Polymorphism
+* Infinite number of types, specified by programmer
+
 ## Java
 
 ## Parallelism
