@@ -78,4 +78,6 @@
         * Each 64 compute CPUs
           * Each 1 management CPUs
    * 10649600 cones
-     * 93 petaFlops
+   * 93 petaFLOPS
+   * 15.37 megaWatts
+     * 6 gigaFLOPS per Watt
