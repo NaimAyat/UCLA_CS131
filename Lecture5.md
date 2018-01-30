@@ -37,9 +37,9 @@
   * Name equivalence: must have same names
 * Subtypes
   * Ex. Subclasses in C++ or Java
-  * Given two types, T<sub>1</sub> and T<sub>2</sub>; is T<sub>1</sub> a subset of T<sub>2</sub>?
-  * `int` is a subset of `long` in C
-  * `char*` is a subset of `char const*`
+  * Given two types, T<sub>1</sub> and T<sub>2</sub>; is T<sub>1</sub> ⊆ T<sub>2</sub>?
+  * `int` is a subtype of `long` in C
+  * `char*` is a subtype of `char const*`
 
 
 ## Java
