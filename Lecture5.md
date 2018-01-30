@@ -69,7 +69,5 @@
   1. Templates
      * Compiler recompiles code for each instantiation
   2. Generics
-
-## Java
-
+     * Only one copy of the compiled code; checked generically
 ## Parallelism
