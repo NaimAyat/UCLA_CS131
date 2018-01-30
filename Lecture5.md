@@ -22,7 +22,19 @@
   * Structural equivalence: types are the same if their layout or operations are the same
     * Layout: applies to exposed-type languages
     * Operations: applies to languages with information hiding
+    ```
+    struct s {int val; struct t*next;};
+    struct t {int val; struct s*next;};
+    
+    struct s a;
+    struct t b;
+    
+    ...
+    
+    a = b;
+    ```
   * Name equivalence: must have same names
+
 
 ## Java
 
