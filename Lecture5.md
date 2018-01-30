@@ -42,8 +42,25 @@
   * `char*` is not a subtype of `char const*`
     * Can do both loads and stores on `char*`; can only do loads on `char const*`
     * Inverse is true: `char const*` ⊆ `char*`
-
-
+### Polymorphism
+* Ex. `sin(x)`
+  * In Fortran (polymorphic): 
+    * One `sin` function, `sin(x)`, depends on type of argument; float, double, or long double
+    * Implementation identified by looking at arguments
+  * In C (not polymorphic):
+    * There are different `sin` functions for each argument type: `sin`, `sinf`, etc.
+#### "Ad-Hoc" Polymorphism
+* Overloading: identify implementation by looking at argument types or result type
+  * Ex. `double x = sin(10);`
+    * `x` is a double; `sin` is an int
+  * Implemented on a nonoverloaded system by *name manging*
+    * Flat symbol table
+* Coercion: coversion of a value to a different data type
+  ```
+  double x, y;
+  x = 3;            // implicit coercion (coercion)
+  y = (double) 5;   // explicit coercion (casting)
+  ```
 ## Java
 
 ## Parallelism
