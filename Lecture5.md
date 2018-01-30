@@ -63,6 +63,8 @@
   ```
 #### Universal Polymorphism
 * Infinite number of types, specified by programmer
+#### Parametric Polymorphism
+* A function type contains a type variable. Ex. `length: 'a list -> int`
 
 ## Java
 
