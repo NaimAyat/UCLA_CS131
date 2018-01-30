@@ -65,6 +65,10 @@
 * Infinite number of types, specified by programmer
 #### Parametric Polymorphism
 * A function type contains a type variable. Ex. `length: 'a list -> int`
+* Two types: 
+  1. Templates
+     * Compiler recompiles code for each instantiation
+  2. Generics
 
 ## Java
 
