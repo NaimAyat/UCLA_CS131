@@ -39,7 +39,9 @@
   * Ex. Subclasses in C++ or Java
   * Given two types, T<sub>1</sub> and T<sub>2</sub>; is T<sub>1</sub> ⊆ T<sub>2</sub>?
   * `int` is a subtype of `long` in C
-  * `char*` is a subtype of `char const*`
+  * `char*` is not a subtype of `char const*`
+    * Can do both loads and stores on `char*`; can only do loads on `char const*`
+    * Inverse is true, then; `char const*` ⊆ `char*`
 
 
 ## Java
