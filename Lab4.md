@@ -74,3 +74,10 @@
    * Tokens: `?` `:` `!=` `+` `!` `INT` `()`
    * Ambiguity example: `5!=3+1`. Does this mean `evaluate 5 is not equal to 3, then add 1` or `evaluate 5 is not equal to (3+1)`?
    * Rewrite the grammar so it is not ambiguous:
+     ```
+     ()
+     !
+     +
+     !=
+     ?:
+     ```
