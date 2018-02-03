@@ -42,3 +42,6 @@
    `merge_sorted(fun a b -> List.length a < List.length b)`?
    * Answer: `(('a list) -> ('a list) -> (bool))`
    * Answer: `('a list list) -> ('a list list) -> ('a list list)`
+4. Is your implementation of `merge_sorted` tail recursive? 
+   * Answer: No, it makes a recursive call and does more work afterwords; tail recursion would mean that it doesn't do any more work after the recursive call.
+   * The implementation may be subject to stack overflow. This is because at each level of recursion, we need to remember what `headA` and `headB` are.
