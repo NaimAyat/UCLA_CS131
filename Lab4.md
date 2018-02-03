@@ -45,3 +45,15 @@
 4. Is your implementation of `merge_sorted` tail recursive? 
    * Answer: No, it makes a recursive call and does more work afterwords; tail recursion would mean that it doesn't do any more work after the recursive call.
    * The implementation may be subject to stack overflow. This is because at each level of recursion, we need to remember what `headA` and `headB` are.
+   * Here's a tail-recursive version:
+     ```
+     let merge_sorted lt a b =
+       let rec helper lt a b agg = match a with
+       | [] -> agg @ b
+       | headA::tailA -> (match b with
+         | [] -> agg @ a
+         | headB::tailB -> if lt headA headB
+           then helper lt tailA b (agg @ [headA])
+           else helper lt tailB a (agg @ [headB]))
+       in helper lt a b []
+     ```
