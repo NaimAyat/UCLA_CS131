@@ -23,5 +23,5 @@
 * The value of this variable will never be cached thread-locally: all reads and writes will go straight to main memory
 ## Midterm Examples
 1. Write an OCaml function merge_sorted that merges two sorted lists. Its first argument should be a comparison function `It` that compares two list elements and returns true if the first element is less than the second. Its second and third arguments should be the lists to be merged. 
-   For example, `(merge_sorted (<) [21; 49; 49; 61] [-5; 20; 25; 49; 50; 100])`
-   Should yield: `[-5; 20; 21; 25; 49; 49; 49; 50; 61; 100]`
+    * For example, `(merge_sorted (<) [21; 49; 49; 61] [-5; 20; 25; 49; 50; 100])`
+    * Should yield: `[-5; 20; 21; 25; 49; 49; 49; 50; 61; 100]`
