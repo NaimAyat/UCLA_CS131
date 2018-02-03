@@ -37,5 +37,8 @@
       ```
 2. What is the type of `merge_sorted` from question (1)?
    * Answer: `('a -> 'a -> bool) -> ('a list) -> ('a list) -> ('a list)`
-3. What does the following expression yield, and what is its type: `merge_sorted(fun a b -> List.length a < List.length b)`?
+3. What does the following expression yield, and what is its type: 
+
+   `merge_sorted(fun a b -> List.length a < List.length b)`?
+
    * 
