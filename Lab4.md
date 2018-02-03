@@ -9,3 +9,7 @@
 * Questions
   * Short answer (yes/no and why)
   * Coding
+## Java Memory Model
+* All objects are references, allocated on the heap
+* All objects are passed by value, but most values are objects (which are stored as pointers)
+* Concurrency: Correctly and efficiently managing access to shared resources (from multiple possibly-simultaneous clients)
