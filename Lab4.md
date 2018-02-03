@@ -57,3 +57,4 @@
            else helper lt tailB a (agg @ [headB]))
        in helper lt a b []
      ```
+5. In Java, is the subtype relation transitive? That is, if A is a subtype of B and B is a subtype of C, is A a subtype of C? 
