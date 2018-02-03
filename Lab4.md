@@ -58,3 +58,4 @@
        in helper lt a b []
      ```
 5. In Java, is the subtype relation transitive? That is, if A is a subtype of B and B is a subtype of C, is A a subtype of C? 
+   * Answer: Yes. By definition of a subtype, if B is contained in C, then C has all properties of B. If A is contained in B, then B has all properties of A. Hence, C must have all properties of A.
