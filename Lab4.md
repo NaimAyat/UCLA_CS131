@@ -25,3 +25,12 @@
 1. Write an OCaml function merge_sorted that merges two sorted lists. Its first argument should be a comparison function `lt` that compares two list elements and returns true if the first element is less than the second. Its second and third arguments should be the lists to be merged. 
     * For example: `(merge_sorted (<) [21; 49; 49; 61] [-5; 20; 25; 49; 50; 100])`
     * Should yield: `[-5; 20; 21; 25; 49; 49; 49; 50; 61; 100]`
+    ```
+    let rec merge_sorted lt a b = match a with
+    | [] -> b
+    | headA::tailA -> (match b with
+      | [] -> a
+      | headB::tailB -> if lt headA head B
+        then headA::(merge_sorted lt tailA b)
+        else headB::(merge_sorted lt a tailB))
+    ```
