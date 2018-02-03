@@ -18,3 +18,6 @@
 * `Synchronized` keyword is used to guarantee operations are atomic
 * No two threads can run the same function at once
 * Using locks, establishes a "happens before" relationship
+### Volatile
+* `Volatile` keyword describes variable which will be modified b multiple threads
+* The value of this variable will never be cached thread-locally: all reads and writes will go straight to main memory
