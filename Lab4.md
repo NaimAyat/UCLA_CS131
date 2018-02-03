@@ -13,3 +13,4 @@
 * Concurrency: Correctly and efficiently managing access to shared resources (from multiple possibly-simultaneous clients)
 ## Java Threads
 * Implemented in `Thread` class
+* Threads' executions can be interleaved (sequential consitency)
