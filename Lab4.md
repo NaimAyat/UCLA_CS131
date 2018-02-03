@@ -40,5 +40,5 @@
 3. What does the following expression yield, and what is its type: 
 
    `merge_sorted(fun a b -> List.length a < List.length b)`?
-
-   * 
+   * Answer: `(('a list) -> ('a list) -> (bool))`
+   * Answer: `('a list list) -> ('a list list) -> ('a list list)`
