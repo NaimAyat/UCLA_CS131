@@ -14,3 +14,7 @@
 ## Java Threads
 * Implemented in `Thread` class
 * Threads' executions can be interleaved (sequential consitency)
+### Synchronized
+* `Synchronized` keyword is used to guarantee operations are atomic
+* No two threads can run the same function at once
+* Using locks, establishes a "happens before" relationship
