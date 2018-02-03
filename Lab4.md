@@ -59,3 +59,5 @@
      ```
 5. In Java, is the subtype relation transitive? That is, if A is a subtype of B and B is a subtype of C, is A a subtype of C? 
    * Answer: Yes. By definition of a subtype, if B is contained in C, then C has all properties of B. If A is contained in B, then B has all properties of A. Hence, C must have all properties of A.
+6. In Java, is the graph of the subtype relation a tree? If so, explain why and say what the root is. If not, give a counterexample.
+   * Answer: No. You could have a one type which is a valid subtype of two or more parent types. This is not a tree.
