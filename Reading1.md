@@ -325,3 +325,13 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
     | x::xs -> first + 1 :: incrementInts xs
   ```
   The above function accepts a list as input and returns the same list with each element incremented by 1.
+### 7.7 Local Variable Definitions
+* Syntax: `<let-exp> ::= let <definitions> in <expression>`
+  * ` let x = 7 in x + 1` will return `- : int = 3`, but `x` cannot be used outside of this statement.
+  * Another example: 
+    ```
+    let daysbetween day1 day2 =
+    let x = numofday day1 in 
+    let y = numofday day2 in
+    x-y;;
+    ```
