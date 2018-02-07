@@ -114,3 +114,19 @@
 * *Prefix notation*: binary operators are written before their operands, like `+ a b`
 * *Postfix notation*: binary operators are written after their operands, like `a b +`
 * Unary operators, of course, can only be either prefix or postfix.
+### 3.3 Precedence
+* Consider the following grammar:
+  ```
+  <exp> ::= <exp> + <exp>
+          | <exp> * <exp>
+          | ( <exp> )
+          | a | b | c
+  ```
+  * This is syntactically correct, however, it is ambiguous. Consider the operation `a+b*c`. The grammar can generate two different parse trees; one for `a+(b*c)` and one for `(a+b)*c`.
+  * Assuming we want `a+b*c` to signify `a+(b*c)`, we modify the grammar:
+    ```
+    <exp> ::= <exp> + <exp> | <mulexp>
+    <mulexp> ::= <mulexp> * <mulexp>
+               | ( <exp> )
+               | a | b | c
+    ```
