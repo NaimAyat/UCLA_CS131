@@ -175,3 +175,19 @@
   * Each line in assembly represents either a piece of data or an instruction for the processor. 
     * An assembler processes the assembly to convert each instruction into the machine's binary format, its *machine language*. The resulting *object file* is no longer readable by people.
     * Next, a *linker* combines all the different components of the program. The linker's output is stored in a single *executable* file. This still may not be completely in machine language. Each time the user runs the executable, the system *loader* gets the program into memory and adds finishing touches.
+#### Optimization
+* Compilers usually optimize code automatically. For example,
+  ```
+  int i = 0;
+  while (i < 100) {
+    a[i++] = x*x*x;
+  }
+  ```
+  Gets a *loop invariant removal* optimization, since we don't need to recompute `x*x*x*` each iteration of the loop:
+  ```
+  int i = 0;
+  int temp = x*x*x;
+  while (i < 100) {
+    a[i++] = temp
+  }
+  ```
