@@ -158,3 +158,4 @@
                   | if <expr> then <stmt>
       <expr> ::= e1 | e2
       ```
+### 3.6 Cluttered Grammars
