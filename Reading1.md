@@ -281,3 +281,30 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 * A type is a set. When you declare that a variable has a certain type, you are sayng that the values the variable can have are a type of a certain set.
 * Primitive types: any type that a program can use but not define for itself (ex. `int` is limited by hardware)
 * Constructed type: a type a program can define for itself using the primitive types
+#### Enumerations
+* Enumeration: list of all elements of a constructed type. 
+#### Unions
+* A∪B: set of all elements that are in either A or B (or both)
+#### Subtypes
+* A⊆B: A is a subset of B
+### 6.3 Uses for Types
+#### Type Annotations
+* The programmer supplies explicit type information to the language system
+#### Type Inference
+* Language tries to infer type without explicit annotation
+#### Type Checking
+* Static type checking: determines a type for everything before running a program - every variable, expression, and function. Examples: ML and Java.
+* Dynamic type checking: performed at runtime
+* ML and Java are *strongly typed*, meaning the language has stricter typing rules and is more likely to generate an error or refuse to compile if the argument passed to a function does not closely match the expected type. 
+#### Type-Equivalence Issues
+* Language system must decide whether two types are the same
+  * *Name equivalence* is the type-equivalence rule that says two types are equivalent if and only if they have the same name
+  * *Structural equivalence* says that two types are equivalent if and only if they are constructed from the same primitive types using the same type constructors in the same order. ML uses this.
+## Chapter 7
+### 7.3 More Simple Patterns
+* The simplest pattern in ML is `_`. It matches anything and does not introduce any new variables.
+  ```
+  let sayYes _ = "yes";;
+  val sayYes : 'a -> string = <fun>
+  ```
+  This will return "yes" no matter what gets passed in. We could have also replaced the `_` with an `x` to accomplish the same thing, but we shouldn't define variables unless we intend to use them.
