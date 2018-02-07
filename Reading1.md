@@ -248,3 +248,6 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
   # let x = x-1;;
   val x = int 2
   ```
+### 5.8 Tuples and Lists
+* `let x = (1, 2, 3);;` returns `val x : int * int * int = (1, 2, 3)`.
+* `let x = ("red", (3,2.0));;` returns `val x : string * (int * float) = ("red", (3, 2.))`
