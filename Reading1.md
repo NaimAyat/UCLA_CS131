@@ -138,4 +138,4 @@
                    | ( <exp> )
                    | a | b | c
       ```
-    * Note that we order noneterminal symbols in order from lowest to highest: `<exp>`, `<mulexp>`, `<powerexp>`
+    * Note that we order noneterminal symbols in order from lowest to highest precedence: `<exp>`, `<mulexp>`, `<powerexp>`
