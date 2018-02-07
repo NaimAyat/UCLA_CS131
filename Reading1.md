@@ -249,5 +249,12 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
   val x = int 2
   ```
 ### 5.8 Tuples and Lists
+#### Tuples
+* Elements don't have to be of same type
 * `let x = (1, 2, 3);;` returns `val x : int * int * int = (1, 2, 3)`.
 * `let x = ("red", (3,2.0));;` returns `val x : string * (int * float) = ("red", (3, 2.))`
+#### Lists
+* Elements have to be of same type
+* `let x = [1;2;3];;` returns `val x : int list = [1; 2; 3]`
+* `let x = [(1,2);(1,2);(1,2)];;` returns `val x : (int * int) list = [(1, 2); (1, 2); (1, 2)]`
+* `let x = [(1,2);(1,2);(1,2,3)];;` is an error because one of the elements of the list has the type `(int * int * int)`, while the others are `(int * int)`
