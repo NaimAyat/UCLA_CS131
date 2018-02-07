@@ -191,3 +191,30 @@
     a[i++] = temp
   }
   ```
+### 4.3 Variations on the Classical Sequence
+* Interpreters carry out programs without needing it to translate it to machine language. Hence, interpreted code runs much slower than compiled code.
+* Almost every web browser has an interpreter for the Java virtual machine. When you visit a Web page that contains a Java applet, the applet is a Java *bytecode* file, a file in the machine-language format of the Java virtual machine. The browser runs the applet by interpreting its bytecode.
+### 4.4 Binding Times
+* *Binding*: associating properties with names
+#### Language-Definition Time
+Some properties are bound when the language is defined. In C, for example, the meaning of the keywords `void` and `for` are part of the language definition.
+#### Language-Implementation Time
+Some properties are left out of the language definition, either intentionally or accidentally, and are up to each implementation of the language. In C, the range of values for `int` depends on what the compiler determines to be most natural on the machine. Same in ML. In Java, the range of `int` is bound at language-definition time as 32-bits.
+#### Compile Time
+Many properties are determined by the compiler. In statically typed languages like C, the types of all variables are boind at compile time. 
+#### Link Time
+The linker finds the definitions of library functions to match each reference in a program.
+#### Load Time
+The loader puts finishing touches on a program before it begins to run each time. Memory addresses are bound at load time.
+#### Runtime
+Most binds happen when the program runs - for example, the value of an iterator variable `i` is bound during runtime.
+### 4.5 Debuggers
+* When the program hits a fatal defect, the debugger makes a *core dump*, writing a copy of its memory to a file. A language-system tool later extracts useful information from the dump file: the point where the problem occured, the *traceback* of function calls leading up to that point, the values of variables at that point, etc.
+### 4.6 Runtime Support
+* If a program makes explicit calls to library functions, the linker is expected to include that code in the executable. Some additional code is usually included if the program does not refer to it explicitly. This *runtime support* code is important for:
+  * Startup processing. The first thing that runs is the runtime support code, which sets up the processor and memory the way the high-level code expects.
+  * Exception handling. What should the program do if something goes wrong, (ex. divide by 0)? 
+  * Memory management. Some languages implicitly require extensive management. Whenever an entity is created/deleted, memory must be allocated/reused/cleared.
+  * OS interface. Most programs communicate with the OS about things like keyboard and mouse input. This may require some special structure provided by runtime support.
+  * Concurrent execution. Some languages, like Java, include support for multi-threadded programs. Interthread communication and synchronization, as well as thread creation/destruction, require runtime support.
+## Chapter 5
