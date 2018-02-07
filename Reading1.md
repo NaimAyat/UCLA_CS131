@@ -274,4 +274,4 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
   val cons : 'a -> 'a list -> 'a list = <fun>
   ```
   * Interperet the return value: the `cons` function defined above accepts a value of unknown type as a parameter, a list of unkown type as a parameter, and returns a list of unknown type.
-  
+  * `length` is the built-in function that returns the length of a list. The return type is `'a list -> int`
