@@ -168,3 +168,4 @@
               | a | b | c
   ```
   * Notice that we now have to quote parentheses
+## Chapter 4
