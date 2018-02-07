@@ -100,3 +100,8 @@
   * `[something]` in the right-hand side of a production means that the `something` inside is optional
   * `{something}` in the right-hand side of a production means that the `something` can be repeated zero or more times
   * Parentheses group things on the RHS so that `|`, `[]`, and `{}` can be used unambiguously
+  * Example: an  `if-then` statement with an optional else: `<if-stmt> ::= if <expr> then <stmt> [else <stmt>]`
+  * Example: zero or more statements, each ending with a semicolon: `<stmt-list> ::= {<stmt> ;}`
+  * Example: a list of zero or more things, each of which can be either a statement or declaration and each ending with a semicolon: `<thing-list> ::= { (<stmt> | <declaration>) ; }`
+  * Recall that parentheses are metasymbols, they make it clear that the `;` token is not part of the choice permitted by the `|` metasymbol (which is the logical "or").
+  
