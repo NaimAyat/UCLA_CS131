@@ -227,5 +227,5 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 ### 5.4 Operators
 * Unary negation operator `~`
 * Concatenation operator `^`. Example: `"hello" ^ " " ^ "world"` returns `- : string = "hello world"`.
-* Comparison operators. Example: `1.0 <= 1.0;;` returns `- : bool = true`
+* Comparison operators. Example: `1.0 <= 1.0;;` returns `- : bool = true`. Applied to strings, the comparisons test alphabetical order (ie. the string first listed in the dictionary has lesser value).
 * Inequality operator `<>`. Equality operator simply `=`.
