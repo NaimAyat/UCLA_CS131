@@ -152,9 +152,9 @@
 * Dangling `else` problem: does `if e1 then if e2 then s1 else s2` mean `if e1 then (if e2 then s1) else s2` or `if e1 then (if e2 then s1 else s2)`?
   * Most languages do the latter - an `else` always goes with its nearest unmatched `if`
     * To accomplish this:
-    ```
-    <stmt> ::= <if-stmt> | s1 | s2
-    <if-stmt> ::= if <expr> then <full-stmt> else <stmt>
-                | if <expr> then <stmt>
-    <expr> ::= e1 | e2
-    ```
+      ```
+      <stmt> ::= <if-stmt> | s1 | s2
+      <if-stmt> ::= if <expr> then <full-stmt> else <stmt>
+                  | if <expr> then <stmt>
+      <expr> ::= e1 | e2
+      ```
