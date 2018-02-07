@@ -223,3 +223,9 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 * Typing `123;;` returns `- : int = 123`. Typing `123.0;;` returns `- : float = 123.`.
 * Typing `true;;` or `false;;` returns `- : bool = false`. These boolean values are case-sensitive.
 * Typing `"hello";;` returns `- : string = "hello"`
+* Typing `'h';;` returns `- : char = 'h'`
+### 5.4 Operators
+* Unary negation operator `~`
+* Concatenation operator `^`. Example: `"hello" ^ " " ^ "world"` returns `- : string = "hello world"`.
+* Comparison operators. Example: `1.0 <= 1.0;;` returns `- : bool = true`
+* Inequality operator `<>`. Equality operator simply `=`.
