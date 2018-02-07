@@ -220,4 +220,6 @@ Most binds happen when the program runs - for example, the value of an iterator 
 ## Chapter 5
 OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 ### 5.3 Constants
-* Typing `123;;` returns `- : int = 123`. Typing `123.0;;` returns `- : float = 123.0`.
+* Typing `123;;` returns `- : int = 123`. Typing `123.0;;` returns `- : float = 123.`.
+* Typing `true;;` or `false;;` returns `- : bool = false`. These boolean values are case-sensitive.
+* Typing `"hello";;` returns `- : string = "hello"`
