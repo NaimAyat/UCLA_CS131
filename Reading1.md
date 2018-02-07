@@ -169,3 +169,9 @@
   ```
   * Notice that we now have to quote parentheses
 ## Chapter 4
+### 4.2 The Classical Sequence
+* *Integrated development environment (IDE)*: language system that provides the programmer a single interface for editing, running, and debugging programs. 
+* Hardware does not understand source files. They must be first processed by a compiler, which translates programs into assembly.
+  * Each line in assembly represents either a piece of data or an instruction for the processor. 
+    * An assembler processes the assembly to convert each instruction into the machine's binary format, its *machine language*. The resulting *object file* is no longer readable by people.
+    * Next, a *linker* combines all the different components of the program. The linker's output is stored in a single *executable* file. This still may not be completely in machine language. Each time the user runs the executable, the system *loader* gets the program into memory and adds finishing touches.
