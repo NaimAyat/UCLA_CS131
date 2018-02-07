@@ -130,3 +130,12 @@
                | ( <exp> )
                | a | b | c
     ```
+    * This language has only two levels of precedence: multiplication at the higher level and addition at the lower level. If we wanted to add an exponentiation operator, we modify the grammar:
+      ```
+      <exp> ::= <exp> + <exp> | <mulexp>
+      <mulexp> ::= <mulexp> * <mulexp> | <powerexp>
+      <powerexp> ::= <powerexp> ** <powerexp> 
+                   | ( <exp> )
+                   | a | b | c
+      ```
+    * Note that we order noneterminal symbols in order from lowest to highest: `<exp>`, `<mulexp>`, `<powerexp>`
