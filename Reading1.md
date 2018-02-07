@@ -231,3 +231,20 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 * Concatenation operator `^`. Example: `"hello" ^ " " ^ "world"` returns `- : string = "hello world"`.
 * Comparison operators. Example: `1.0 <= 1.0;;` returns `- : bool = true`. Applied to strings, the comparisons test alphabetical order (ie. the string first listed in the dictionary has lesser value).
 * Inequality operator `<>`. Equality operator simply `=`.
+### 5.5 Conditional Expressions
+* Syntax: `<conditional> ::= if <expression> then <expression> else <expression>`
+  * `if 1 < 2 then 1 else 2;;` returns `- : int = 1`
+  * The expression in the `if` part must have type bool, and the expression in the `then` part must have the same type as the expression in the `else` part.
+### 5.6 Type Conversion and Function Application
+* `1+1.0` will yield an error because the types do not agree. Types must be converted manually, the language does not do it for you.
+* `float(1)` converts integers to floats: `- : float = 1.`
+### 5.7 Variable Definition
+* Use `let` keyword to bind create a new variable and bind it to a value:
+  ```
+  # let x = 3;;
+  val x : int = 3
+  # x;;
+  - : int = 3
+  # let x = x-1;;
+  val x = int 2
+  ```
