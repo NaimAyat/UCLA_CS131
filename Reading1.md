@@ -225,6 +225,7 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 * Typing `"hello";;` returns `- : string = "hello"`
 * Typing `'h';;` returns `- : char = 'h'`
 ### 5.4 Operators
+* By default, addition/subtraction/multiplication/division deal with ints. For float operations, add a period after the operator: `+.`, `*.`, etc.
 * Unary negation operator `~`
 * Logical or: `or`
 * Logical and: `&`
@@ -275,3 +276,8 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
   ```
   * Interperet the return value: the `cons` function defined above accepts a value of unknown type as a parameter, a list of unkown type as a parameter, and returns a list of unknown type.
   * `length` is the built-in function that returns the length of a list. The return type is `'a list -> int`
+## Chapter 6
+### 6.2 A Menagerie of Types
+* A type is a set. When you declare that a variable has a certain type, you are sayng that the values the variable can have are a type of a certain set.
+* Primitive types: any type that a program can use but not define for itself (ex. `int` is limited by hardware)
+* Constructed type: a type a program can define for itself using the primitive types
