@@ -258,3 +258,20 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 * `let x = [1;2;3];;` returns `val x : int list = [1; 2; 3]`
 * `let x = [(1,2);(1,2);(1,2)];;` returns `val x : (int * int) list = [(1, 2); (1, 2); (1, 2)]`
 * `let x = [(1,2);(1,2);(1,2,3)];;` is an error because one of the elements of the list has the type `(int * int * int)`, while the others are `(int * int)`
+* Empty list: either `nil` or `[]`
+* `[];;` returns `- : 'a list = []`. Names beginning with an apostrophe, like this `'a`, are *type variables*. In other words ,the type is unknown.
+* `@` concatenates two lists: `- : '[1;2] @ [3];;` returns `- : int list = [1; 2; 3]`
+* Construct is written as `::`. It glues a new element onto the front of a list.
+  * `1::[1];;` gives `- : int list = [1; 1]`
+### 5.10 Function Definitions
+* Use `let`, followed by accepted inputs, followed by `=` to define functions.
+  ```
+  # let sums a b = a + b;;
+  val sums : int -> int -> int = <fun>
+  ```
+  ```
+  # let cons a b = a::b;;
+  val cons : 'a -> 'a list -> 'a list = <fun>
+  ```
+  * Interperet the return value: the `cons` function defined above accepts a value of unknown type as a parameter, a list of unkown type as a parameter, and returns a list of unknown type.
+  
