@@ -104,4 +104,13 @@
   * Example: zero or more statements, each ending with a semicolon: `<stmt-list> ::= {<stmt> ;}`
   * Example: a list of zero or more things, each of which can be either a statement or declaration and each ending with a semicolon: `<thing-list> ::= { (<stmt> | <declaration>) ; }`
   * Recall that parentheses are metasymbols, they make it clear that the `;` token is not part of the choice permitted by the `|` metasymbol (which is the logical "or").
-  
+  * If we want to use a metasymbol as a token, we place it in single quotes. For example: `<arr> ::= 'a[1]'` defines the language containing just the string `a[1]`.
+## Chapter 3
+### 3.2 Operators
+* *Unary* operators take a single operand; for instance, the ML language uses the token `~` as the unary negation operator, so the expression `~a` yields the negation of the operand `a`. 
+* *Binary* operators take two operands; for instance, the `+` token takes in the operands `a` and `b`for `a+b`
+* *Ternary* operators take three operands; for instance, the java expression `a?b:c` has the value of either `b` or `c` depending on whether `a` is `true` or `false`.
+* *Infix notation*: binary operators are written between their operands, like `a+b`
+* *Prefix notation*: binary operators are written before their operands, like `+ a b`
+* *Postfix notation*: binary operators are written after their operands, like `a b +`
+* Unary operators, of course, can only be either prefix or postfix.
