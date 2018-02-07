@@ -1,6 +1,6 @@
 # *Modern Programming Languages, 2nd Edition* (Webber)
 # Chapters 1 - 11
-## Chapter 1
+## Chapter 1: Programming Languages
 ### 1.2 Variety
 * Imperative language: supports assignment and iteration (ex. C)
 * Functional language: supports recursion and single-valued variables (ex. ML, Lisp)
@@ -15,7 +15,7 @@
 * Good languages can evolve new dialects (ex. Fortran II through Fortran 2008)
 ### 1.5 Connections
 * It is best to adapt programming style to the language in use (ex. write many small functions in ML, use objects in Java)
-## Chapter 2
+## Chapter 2: Defining Program Syntax
 ### 2.1 Introduction
 * Syntax - defines program form and structure
 * Semantics - defines what programs do; their behavior and meaning
@@ -105,7 +105,7 @@
   * Example: a list of zero or more things, each of which can be either a statement or declaration and each ending with a semicolon: `<thing-list> ::= { (<stmt> | <declaration>) ; }`
   * Recall that parentheses are metasymbols, they make it clear that the `;` token is not part of the choice permitted by the `|` metasymbol (which is the logical "or").
   * If we want to use a metasymbol as a token, we place it in single quotes. For example: `<arr> ::= 'a[1]'` defines the language containing just the string `a[1]`.
-## Chapter 3
+## Chapter 3: Where Syntax Meets Semantics
 ### 3.2 Operators
 * *Unary* operators take a single operand; for instance, the ML language uses the token `~` as the unary negation operator, so the expression `~a` yields the negation of the operand `a`. 
 * *Binary* operators take two operands; for instance, the `+` token takes in the operands `a` and `b`for `a+b`
@@ -168,7 +168,7 @@
               | a | b | c
   ```
   * Notice that we now have to quote parentheses
-## Chapter 4
+## Chapter 4: Language Systems
 ### 4.2 The Classical Sequence
 * *Integrated development environment (IDE)*: language system that provides the programmer a single interface for editing, running, and debugging programs. 
 * Hardware does not understand source files. They must be first processed by a compiler, which translates programs into assembly.
@@ -217,7 +217,7 @@ Most binds happen when the program runs - for example, the value of an iterator 
   * Memory management. Some languages implicitly require extensive management. Whenever an entity is created/deleted, memory must be allocated/reused/cleared.
   * OS interface. Most programs communicate with the OS about things like keyboard and mouse input. This may require some special structure provided by runtime support.
   * Concurrent execution. Some languages, like Java, include support for multi-threadded programs. Interthread communication and synchronization, as well as thread creation/destruction, require runtime support.
-## Chapter 5
+## Chapter 5: A First Look at ML
 OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 ### 5.3 Constants
 * Typing `123;;` returns `- : int = 123`. Typing `123.0;;` returns `- : float = 123.`.
@@ -276,7 +276,7 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
   ```
   * Interperet the return value: the `cons` function defined above accepts a value of unknown type as a parameter, a list of unkown type as a parameter, and returns a list of unknown type.
   * `length` is the built-in function that returns the length of a list. The return type is `'a list -> int`
-## Chapter 6
+## Chapter 6: Types
 ### 6.2 A Menagerie of Types
 * A type is a set. When you declare that a variable has a certain type, you are sayng that the values the variable can have are a type of a certain set.
 * Primitive types: any type that a program can use but not define for itself (ex. `int` is limited by hardware)
@@ -300,7 +300,7 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 * Language system must decide whether two types are the same
   * *Name equivalence* is the type-equivalence rule that says two types are equivalent if and only if they have the same name
   * *Structural equivalence* says that two types are equivalent if and only if they are constructed from the same primitive types using the same type constructors in the same order. ML uses this.
-## Chapter 7
+## Chapter 7: A Second Look at ML
 ### 7.3 More Simple Patterns
 * The simplest pattern in ML is `_`. It matches anything and does not introduce any new variables.
   ```
@@ -335,3 +335,4 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
     let y = numofday day2 in
     x-y;;
     ```
+## Chapter 8: Polymorphism
