@@ -308,3 +308,20 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
   val sayYes : 'a -> string = <fun>
   ```
   This will return "yes" no matter what gets passed in. We could have also replaced the `_` with an `x` to accomplish the same thing, but we shouldn't define variables unless we intend to use them.
+### 7.4 Complex Patterns
+* `let f (x :: xs) = x;;` introduces the variables `x` and `xs` which are respectively bound to the head and the tail of the passed in list.
+### 7.6 Using Multiple Patterns for Functions
+* Use `match`:
+  ```
+  let isZero x = match x with 
+    | 0 -> "yes"
+    | _ -> "no"
+  ```
+  * This function will return `yes` if we pass in 0, and `no` otherwise
+* For recursive functions, use `let rec`:
+  ```
+  let rec incrementInts l = match l with
+    | [] -> []
+    | x::xs -> first + 1 :: incrementInts xs
+  ```
+  The above function accepts a list as input and returns the same list with each element incremented by 1.
