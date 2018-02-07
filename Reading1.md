@@ -1,5 +1,5 @@
 # *Modern Programming Languages, 2nd Edition* (Webber)
-# Chapters 1, 2, 3, 5, 7 , 9, & 11
+# Chapters 1 - 11
 ## Chapter 1
 ### 1.2 Variety
 * Imperative language: supports assignment and iteration (ex. C)
