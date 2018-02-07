@@ -139,3 +139,12 @@
                    | a | b | c
       ```
     * Note that we define noneterminal symbols in order from lowest to highest precedence: `<exp>`, `<mulexp>`, `<powerexp>`
+### 3.4 Associativity
+* The grammar for a language must generate only one parse tree per expression. In most languages, `a+b+c` specifies `(a+b)+c`. Hence, the `+` operator is *left associative*. 
+* For a left associative grammar, we do:
+  ```
+  <exp> ::= <exp> + <mulexp> | <mulexp>
+  <mulex> ::= <mulexp> * <rootexp> | <rootexp>
+  <rootexp> ::= ( <exp> )
+              | a | b | c
+  ```
