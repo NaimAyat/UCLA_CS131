@@ -218,3 +218,6 @@ Most binds happen when the program runs - for example, the value of an iterator 
   * OS interface. Most programs communicate with the OS about things like keyboard and mouse input. This may require some special structure provided by runtime support.
   * Concurrent execution. Some languages, like Java, include support for multi-threadded programs. Interthread communication and synchronization, as well as thread creation/destruction, require runtime support.
 ## Chapter 5
+OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
+### 5.3 Constants
+* Typing `123;;` returns `- : int = 123`. Typing `123.0;;` returns `- : float = 123.0`.
