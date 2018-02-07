@@ -158,4 +158,13 @@
                   | if <expr> then <stmt>
       <expr> ::= e1 | e2
       ```
-### 3.6 Cluttered Grammars
+### 3.7 Parse Trees and EBNF
+* EBNF can make grammar definitions more clearly. For example, `<exp> ::= <exp> + <mulexp> | <mulexp>` is more clearly written as `<exp> ::= <mulexp> {+ <mulexp>}`.
+* Example: EBNF left-justified grammar defining addition and multiplication:
+  ```
+  <exp> ::= <mulexp> {+ <mulexp>}
+  <mulexp> ::= <rootexp> {* <rootexp>}
+  <rootexp> ::= `(` <exp> `)`
+              | a | b | c
+  ```
+  * Notice that we now have to quote parentheses
