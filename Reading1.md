@@ -359,9 +359,10 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 ## Chapter 9: A Third Look at ML
 ### 9.2 More Pattern Matching
 * A rule is a piece of ML syntax that looks like: `<rule> ::= <pattern> -> <expression>`
-* A match consists of one or more rules separated by the `|` token: `<match> ::= <rule> | <rule> '|' <match>
+* A match consists of one or more rules separated by the `|` token: `<match> ::= <rule> | <rule> '|' <match>`
 ### 9.3 Function Values and Anonymous Functions
 * Anonymous functions aren't given names:
   ```
-  (fun x -> x + 1) 7;;
+  # (fun x -> x + 1) 7;;
+  - : int = 8
   ```
