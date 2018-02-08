@@ -389,3 +389,6 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 ## Chapter 11: A Fourth Look at ML
 ### 11.2: Enumerations
 * We can define datatypes in OCaml as enumerations using `type`. For example, `type day = Mon | Tues | Wed | Thurs | Fri | Sat | Sun` will return (just as inputted) `type day = Mon | Tues | Wed | Thurs | Fri | Sat | Sun`.
+### 11.3: Data Constructors with Parameters
+* You can add a parameter to a data constructor by adding the keyword `of` followed by the type of the parameter. For example: `type exint = Value of int | PlusInf | MinusInf;;`
+  * Means that `Value` will contain an `int`, which is to be given as a parameter to the data constructor, like `Value 3`
