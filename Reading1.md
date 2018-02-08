@@ -366,3 +366,7 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
   # (fun x -> x + 1) 7;;
   - : int = 8
   ```
+### 9.4 Higher-Order Functions and Currying
+* Every function has an order: a function that does not take any functions as parameters and does not return a function has order 1. A function that takes a function as a parameter or returns a function value has order n+1, where n is the order of its highest order parameter or returned value.
+  * A function of order n is called an "n<sup>th</sup> order function".
+* *Currying*: writing a function that takes a parameter and returns another function, which in turn takes a parameter. Repeat until desired result is achieved.
