@@ -416,4 +416,25 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
   * `new String()`: Returns a new string of length zero
   * `new String(s)`: Returns a new string that contains a copy of string `s`
   * `new String(chars)`: Returns a new string that contains the character values from the `chars` array
-### Chapter 15: A Second Look at Java
+## Chapter 15: A Second Look at Java
+### 15.2 Implementing Interfaces
+* An interface in Java is a collection of method prototypes, method declarations that omit the method body. For example, we define the `Drawable` interface:
+  ```
+  public interface Drawable {
+    void show (int xPos, int yPos);
+    void hide();
+  }
+  ```
+  * `Drawable` contains two method prototypes, `show` and `hide`.
+  * Now, to implement the `Drawable` interface, a class must first announce that it does so by using the `implements` clause and then must actually provide public methods named show and hide that match the prototypes in the interface. For example:
+    ```
+    public class Icon implements Drawable {
+      public void show(int x, int y) {
+         ... method body ...
+      }
+      public void hide() {
+         ... method body ...
+      }
+      ... more methods and fields ...
+    }
+    ```
