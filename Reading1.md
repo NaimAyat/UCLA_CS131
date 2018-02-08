@@ -405,3 +405,9 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 * The `+` operator means concatenation when either of the operands is a string. If one operand is a string and the other is not, the non-string operand is coerced to a string before concatenation.
 * Comparison and arithmetic operators are identical to those in C++
 * `a=b=c` changes the values of `a` and `b`, making them equal to `c`
+#### Method Calls
+* `s.length()`: Returns the length of the string `s`
+* `s.equals(r)`: Returns true if `s` and `r` are equal, false otherwise
+* `s.toUpperCase()`: Returns a string that is the uppercase version of string `s`
+* `s.charAt(3)`: Returns the character in position `3` of the string (zero-indexed)
+* `s.toUpperCase().charAt(3)`: Returns the char value in position `3` in the uppercase version of string `s`
