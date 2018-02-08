@@ -356,3 +356,12 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 * A function exhibits parametric polymorphism if it has a type that contains one or more type variables.
 ### 8.5 Subtype Polymorphism
 * A function or operator exhibits subtype polymorphism if one or more of its parameter types have subtypes.
+## Chapter 9: A Third Look at ML
+### 9.2 More Pattern Matching
+* A rule is a piece of ML syntax that looks like: `<rule> ::= <pattern> -> <expression>`
+* A match consists of one or more rules separated by the `|` token: `<match> ::= <rule> | <rule> '|' <match>
+### 9.3 Function Values and Anonymous Functions
+* Anonymous functions aren't given names:
+  ```
+  (fun x -> x + 1) 7;;
+  ```
