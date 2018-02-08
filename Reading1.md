@@ -371,3 +371,8 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
   * A function of order n is called an "n<sup>th</sup> order function".
 * *Currying*: writing a function that takes a parameter and returns another function, which in turn takes a parameter. Repeat until desired result is achieved.
 ## Chapter 10: Scope
+### 10.2 Definitions and Scope
+* A definition is anything that establishes a possible binding for a name.
+* An occurence of a name is in the scope of a given definition of that name whenever the definition governs the binding for the occurence.
+### 10.3 Scoping with Blocks
+* A block is any language construct that contains definitions and also contains the region of the program where those definitions apply. For example, the `let` construct is an example of a block in ML.
