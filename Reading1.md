@@ -386,3 +386,6 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
  ```
  ### 10.6 Dynamic Scoping
  * Dynamic scoping has the unique property that it does not answer the scoping question until runtime. By contrast, scoping rules that are decided before runtime are called *static* or *lexical scoping*.
+## Chapter 11: A Fourth Look at ML
+### 11.2: Enumerations
+* We can define datatypes in OCaml as enumerations using `type`. For example, `type day = Mon | Tues | Wed | Thurs | Fri | Sat | Sun` will return (just as inputted) `type day = Mon | Tues | Wed | Thurs | Fri | Sat | Sun`.
