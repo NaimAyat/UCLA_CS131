@@ -411,3 +411,8 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 * `s.toUpperCase()`: Returns a string that is the uppercase version of string `s`
 * `s.charAt(3)`: Returns the character in position `3` of the string (zero-indexed)
 * `s.toUpperCase().charAt(3)`: Returns the char value in position `3` in the uppercase version of string `s`
+#### Object Creation Expressions
+* `<creation-expression> ::= new <class-name> (<parameter-list>)`
+  * `new String()`: Returns a new string of length zero
+  * `new String(s)`: Returns a new string that contains a copy of string `s`
+  * `new String(chars)`: Returns a new string that contains the character values from the `chars` array
