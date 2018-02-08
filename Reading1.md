@@ -438,3 +438,15 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
       ... more methods and fields ...
     }
     ```
+### 15.3 Extending Classes
+* The phrase `extends` in a new class definition means that the new class will inherit all the fields and methods of the other class. For example, here is the implementation of PeekableStack:
+  ```
+  public class PeekableStack extends Stack {
+    public String peek() {
+      String s = remove();
+      add(s);
+      return s;
+    }
+  }
+  ```
+  * `PeekableStack` now inherits all properties of `Stack`, while adding a new function `peek`.
