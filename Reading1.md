@@ -392,3 +392,6 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 ### 11.3: Data Constructors with Parameters
 * You can add a parameter to a data constructor by adding the keyword `of` followed by the type of the parameter. For example: `type exint = Value of int | PlusInf | MinusInf;;`
   * Means that `Value` will contain an `int`, which is to be given as a parameter to the data constructor, like `Value 3`
+### 11.4 Type Constructors with Parameters
+* The type constructor for a `type` definition can have parameters too. The result is a polymorphic type constructor. For example, here is the `option` type constructor, which is predefined: `type 'a option = NONE | SOME of 'a;`
+  * The type constructor is named `option`. It takes a type `'a` as a parameter. The data constructors are `NONE` and `SOME`. The `SOME` constructor takes a parameter of type `'a`.
