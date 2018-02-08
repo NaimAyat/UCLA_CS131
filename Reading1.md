@@ -397,3 +397,11 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
   * The type constructor is named `option`. It takes a type `'a` as a parameter. The data constructors are `NONE` and `SOME`. The `SOME` constructor takes a parameter of type `'a`.
 ### 11.5 Recursively Defined Type Constructors
 * We define a type constructor called `intlist`: `type intlist = INTNIL | INTCONS of int * intlist;;`. As with all type definitions, this simply returns itself: `type intlist = INTNIL | INTCONS of int * intlist;;`.
+## Chapter 13: A First Look at Java
+### 13.2 Thinking about Objects
+* Method: the things that an object knows how to do is called the method of the object
+### 13.3 Simple Expressions and Statements
+#### Concatenation of Strings
+* The `+` operator means concatenation when either of the operands is a string. If one operand is a string and the other is not, the non-string operand is coerced to a string before concatenation.
+* Comparison and arithmetic operators are identical to those in C++
+* `a=b=c` changes the values of `a` and `b`, making them equal to `c`
