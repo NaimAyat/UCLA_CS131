@@ -376,3 +376,13 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 * An occurence of a name is in the scope of a given definition of that name whenever the definition governs the binding for the occurence.
 ### 10.3 Scoping with Blocks
 * A block is any language construct that contains definitions and also contains the region of the program where those definitions apply. For example, the `let` construct is an example of a block in ML.
+### 10.4 Scoping with Labeled Namespaces
+* A labeled namespace is any language construct that contains definitions and a region of the program where those definitions apply, and also has a name that can be used to access those definitions from outside the construct. For example, ML has a kind of labeled namespace called a `structure`:
+ ```
+ structure Fred = struct
+   val a = 1;
+   fun f x = x + a;
+ end;
+ ```
+ ### 10.6 Dynamic Scoping
+ * Dynamic scoping has the unique property that it does not answer the scoping question until runtime. By contrast, scoping rules that are decided before runtime are called *static* or *lexical scoping*.
