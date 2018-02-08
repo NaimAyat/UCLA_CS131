@@ -396,4 +396,4 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
 * The type constructor for a `type` definition can have parameters too. The result is a polymorphic type constructor. For example, here is the `option` type constructor, which is predefined: `type 'a option = NONE | SOME of 'a;`
   * The type constructor is named `option`. It takes a type `'a` as a parameter. The data constructors are `NONE` and `SOME`. The `SOME` constructor takes a parameter of type `'a`.
 ### 11.5 Recursively Defined Type Constructors
-* We define a type constructor called `intlist`: `type intlist = INTNIL | INTCONS of int * intlist;;`. 
+* We define a type constructor called `intlist`: `type intlist = INTNIL | INTCONS of int * intlist;;`. As with all type definitions, this simply returns itself: `type intlist = INTNIL | INTCONS of int * intlist;;`.
