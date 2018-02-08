@@ -336,3 +336,23 @@ OCaml infers types. For example, `1+2*3;;` will yield `- : int = 7`
     x-y;;
     ```
 ## Chapter 8: Polymorphism
+* Polymorphism: the provision of a single interface to entities of different types.
+### 8.2 Overloading
+* An overloaded function name or operator is one that has at least two definitions, all of different types.
+* For example, we can overload functions in C++. Here, we overload the `square` function:
+  ```
+  int square (int x) { return x*x }
+  double square (double x) { return x*x }
+  ```
+  * The C++ language uses a parameter's type to determine which `square` function to call.
+### 8.3 Parameter Coercion
+* A coercion is an implicit type conversion. ML does not perform coercion, but many languages do. For example, in java, you can write:
+  ```
+  double x;
+  x = 2;
+  ```
+  * Although `x` is declared to have type `double`, it can be assigned an integer. Coercion implicitly converts the integer `2` to the double value `2.0` before the assignment is made.
+### 8.4 Parametric Polymorphism
+* A function exhibits parametric polymorphism if it has a type that contains one or more type variables.
+### 8.5 Subtype Polymorphism
+* A function or operator exhibits subtype polymorphism if one or more of its parameter types have subtypes.
