@@ -1,6 +1,6 @@
 # Lab (Feb 9, 2018)
 ## Prolog
-* GPrology used in this class (not SWI-Prolog)
+* GProlog used in this class (not SWI-Prolog)
 * Declarative language
   * State high-level goals, not how to achieve them
 * Declare a database of facts/rules
