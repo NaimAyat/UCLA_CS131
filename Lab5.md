@@ -61,9 +61,9 @@
   * `?- tail(cons(1, empty), X).` returns `empty`
   * `?- tail(cons(1, 5), X).` returns `5`
   * `?- head(List, 1).` returns `List - cons(1,_)`
-* `length(empty, 0).`
+* `mylength(empty, 0).`
 * ```
-  length(cons(X, XS), Y) :-
-    length(XS, LXS),
+  mylength(cons(X, XS), Y) :-
+    mylength(XS, LXS),
     Y is LXS + 1.
   ```
