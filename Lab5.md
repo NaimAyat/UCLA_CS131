@@ -16,8 +16,6 @@
   * Things that look like functions are "predicates".
   * Save as `people.pl`
   * Type: `?- person(alice).` Returns `yes`
-  * Lowercase letters describe predicates and atoms
-  * Variables must start with an uppercase
 * Ex 2:
   ```
   father(orville, abe).
@@ -41,3 +39,5 @@
 ### Syntax
 * Predicates
   * Relations that are true or faslse
+* Lowercase letters describe predicates and atoms
+* Variables must start with an uppercase
