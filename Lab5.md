@@ -46,3 +46,10 @@
   * Conclusion is only true if all hypotheses are true
 * And operator `,`
 * Or operator `;`
+#### Example
+* Write a `birthparents` predicate that has 3 variables, `Child`, `Mother`, and `Father`, and uses the `mother` and `father` predicate.
+  ```
+  birthparents(Father, Mother, Child) :-
+    father(Father, Child).
+    mother(Mother, Child).
+  ```
