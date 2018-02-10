@@ -41,3 +41,8 @@
   * Relations that are true or faslse
 * Lowercase letters describe predicates and atoms
 * Variables must start with an uppercase
+* `conclusion :- hypothesis.`
+  * Multiple hypotheses separated by commas
+  * Conclusion is only true if all hypotheses are true
+* And operator `,`
+* Or operator `;`
