@@ -4,3 +4,4 @@
 * Functional: Lisp, ML
 * Logic: Prolog
   * Just logic, focus on predicates
+* Algorithm = Logic (correctness) + Control (efficiency)
