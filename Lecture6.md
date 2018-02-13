@@ -8,6 +8,9 @@
 #### Example: Prolog Sort
 ```
 sort(L,S) :- perm(L,S), sorted(S).
+sorted([]).
+sorted([_]).
+sorted([X,Y|L]) :- X =< Y
 ```
 * `:-` denotes `if`; `,` denotes `and`
 * Each clause must end in `.`
