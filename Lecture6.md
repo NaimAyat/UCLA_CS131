@@ -24,3 +24,9 @@ perm([X,L], S). % Above 4 lines no longer necessary
 ```
 * `:-` denotes `if`; `,` denotes `and`
 * Each clause must end in `.`
+### Prolog Syntax (Edinburgh Syntax)
+* Term:
+  * Atom: any string
+  * Number
+  * Variable: must begin with capital letter
+    * Can become instantiated
