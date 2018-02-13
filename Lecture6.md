@@ -29,4 +29,6 @@ perm([X,L], S). % Above 4 lines no longer necessary
   * Atom: any string
   * Number
   * Variable: must begin with capital letter
-    * Can become instantiated
+    * Can become instantiated (bound) on success
+    * Unstantiated on failure
+    * Not assigned in usual sense
