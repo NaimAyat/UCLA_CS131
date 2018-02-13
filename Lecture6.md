@@ -32,3 +32,5 @@ perm([X,L], S). % Above 4 lines no longer necessary
     * Can become instantiated (bound) on success
     * Unstantiated on failure
     * Not assigned in usual sense
+  * Structure
+    * Arity: number of arguments
