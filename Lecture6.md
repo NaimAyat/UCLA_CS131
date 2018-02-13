@@ -10,7 +10,7 @@
 sort(L,S) :- perm(L,S), sorted(S).
 sorted([]).
 sorted([_]).
-sorted([X,Y|L]) :- X =< Y
+sorted([X,Y|L]) :- X =< Y, sorted(L).
 ```
 * `:-` denotes `if`; `,` denotes `and`
 * Each clause must end in `.`
