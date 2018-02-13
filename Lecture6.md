@@ -5,3 +5,8 @@
 * Logic: Prolog
   * Just logic, focus on predicates
 * Algorithm = Logic (correctness) + Control (efficiency)
+#### Example: Sort
+```
+sort(L,S) :- perm(L,S), sorted(S).
+```
+Note: `:-` denotes `if`, `,` denotes `and`
