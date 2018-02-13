@@ -15,7 +15,7 @@ perm([],[]).
 perm([X],[X]).
 perm([X,Y],[X,Y]).
 perm([X,Y],[Y,X]).
-perm([X,L], S). %Above 4 lines no longer necessary
+perm([X,L], S). % Above 4 lines no longer necessary
   append(S1, [X|S2], S),
   perm(L,S1S2),
   append(S1,S2,S1S2).
