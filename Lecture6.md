@@ -9,4 +9,4 @@
 ```
 sort(L,S) :- perm(L,S), sorted(S).
 ```
-Note: `:-` denotes `if`, `,` denotes `and`
+Note: `:-` denotes `if`; `,` denotes `and`
