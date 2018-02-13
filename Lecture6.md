@@ -11,6 +11,14 @@ sort(L,S) :- perm(L,S), sorted(S).
 sorted([]).
 sorted([_]).
 sorted([X,Y|L]) :- X =< Y, sorted(Y|L).
+perm([],[]).
+perm([X],[X]).
+perm([X,Y],[X,Y]).
+perm([X,Y],[Y,X]).
+perm([X,L], S).
+  append(S1, [X|S2], S),
+  perm(L,S1S2),
+  append(S1,S2,S1S2).
 ```
 * `:-` denotes `if`; `,` denotes `and`
 * Each clause must end in `.`
