@@ -250,3 +250,4 @@ ancestor(X,Y) :-
 ## Chapter 20: A Second Look at Prolog
 * Unification: pattern-matching technique
 * A substitution is a set of bindings for variables
+* MGU (most general unifier): Prolog wants to bind variables only when necessary to prove the query
