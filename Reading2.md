@@ -143,3 +143,8 @@ int[] a = null;
 #### Protoypes
 * A protype is just an objec tthat is copied to make other, similar objects
 * Prototype-based languages have constructs for creating objects from scratch and for making modified copies of existing objects
+#### Inheritance
+* Simple concept: a derived class gets things from the base class. Here's where languages differ:
+  * Can a derived class have more than one base class (multiple inheritance)? Yes: C++, CLOS, Eiffel. No: Java, Smalltalk.
+  * Must a derived class inherit all the methods and fields of the base class, or can it choose? All: Java. Choose: Sather.
+  * Is there a common root to the inheritance hierarchy - a class from which all other classes inherit? Yes: Java, the class `Object`. No: C++.
