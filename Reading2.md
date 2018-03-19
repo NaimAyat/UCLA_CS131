@@ -178,3 +178,4 @@ int[] a = null;
 * The formal parameter is just like a local variable in the activation record of the called method. It is initialized using the value of the actual called parameter, before the called method begins executing. Then, after the called method finishes executing, the final value of the formal parameter is assigned to the actual parameter.
 ### 18.6 By Reference
 * The caller and the callee use the same variable for the parameter. If the callee modifies the parameter variable, the effect is visible to the caller's variable. The formal parameter is an alias for the actual parameter - another name for the same memory location.
+* Two different expressions that have the same lvalue (memory location) are *aliases* of each other
