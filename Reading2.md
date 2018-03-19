@@ -188,3 +188,5 @@ int[] a = null;
 * For passing parameters by name, each actual parameter is evaluated in the caller's context, on every use of the corresponding formal parameter.
 ### 18.9 By Need
 * Passing parameters by need means that each actual parameter is evalueated in the caller's context, on the first use of the corresponding formal parameter. The value of the actual parameter is then cached, so that subsequent uses of the formal parameter do not cause reevaluation
+### 18.10 Specification Issues
+* Are actual parameters always evaluated (eager evaluation) or evaluated only if the corresponding formal parameter is actually used (lazy evaluation)? ML uses eager evaluation.
