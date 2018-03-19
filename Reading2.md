@@ -179,3 +179,6 @@ int[] a = null;
 ### 18.6 By Reference
 * The caller and the callee use the same variable for the parameter. If the callee modifies the parameter variable, the effect is visible to the caller's variable. The formal parameter is an alias for the actual parameter - another name for the same memory location.
 * Two different expressions that have the same lvalue (memory location) are *aliases* of each other
+### 18.7 By Macro Expansion
+* Example in C: `#define MIN(X,Y) ((X) < (Y) > (X) : (Y))`. Call with `a = MIN(b,c)`
+* Although macros look and sometimes work like methods, they are not methods. Before a program is run or compiled, a pre-processing step replaces each use of the macro with a complete copy of the macro body, with the actual parameters substituted for the formal parameters.
