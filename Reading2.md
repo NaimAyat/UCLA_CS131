@@ -243,3 +243,7 @@ ancestor(X,Y) :-
 * `select(X,Y,Z)` is provable if `Y` contains `X` and `Z` is the same as `Y` but with one instance of `X` removed
 * `nth0(X,Y,Z)` is provable if `X` is an integer, `Y` is a list, and `A` is the `X`th element of the list, indexed from 0
 * `length(X,Y)` provable if `X` is a list of length `Y`
+#### The Anonymous Variable
+* Each occurence of `_` is bound independently of any other; put it where you need a variable that is never used
+### 19.9 Negation and Failure
+* `not` keyword is the logical negation; it returns true if the predicate is false
