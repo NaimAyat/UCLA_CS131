@@ -225,3 +225,6 @@ ancestor(X,Y) :-
   parent(Z,Y),
   ancestor(X,Z).
 ```
+### 19.5 The Two Faces of Prolog
+* Prolog is a declarative language
+* Automatic programming: the idea that computers automatically write their own problems, given a description of the problem to be solved
