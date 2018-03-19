@@ -292,3 +292,14 @@ ancestor(X,Y) :-
 * Efficiency guideline: restrict early. Stop searching useless alternatives ASAP.
 ### 21.5 A Cost Model for Arrays
 * Accessing array elements sequentially is faster than accessing them non-sequentially
+### 21.6 Spurious Cost Models
+* If the line that makes a function call is replaced with a direct computation, how much faster will the program be? This proposed change is called *inlining*
+* Any respectable C compiler can perform inlining automatically
+## Chapter 22: A Third Look at Prolog
+### 22.2 Numeric Computation
+* Terms in Prolog are not evaluated automatically
+#### Numeric Evaluation
+* The predicate `is` evaluates terms; `X is 1+2*3` returns `X = 7`
+* `is`: The goal `X is Y` evaluates `Y` and unifies the result with `X`
+* `=`: The goal `X=Y` unifies `X` and `Y`. Unification does not evaluate numeric expressions at all, but only pays attention to term structure.
+* `=:=`: `X=:=Y` evaluates both `X` and `Y` and succeeds iff they are numerically equal.
