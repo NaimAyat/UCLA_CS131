@@ -256,3 +256,10 @@ ancestor(X,Y) :-
 * `p :- q, r.` can be thought of a procedure; to prove a goal, unify it with `p`, then prove `q`, then prove `r`.
 ### 20.4 An Implementational View
 * The basic step the interpreter uses is *resolution*; it applies one clause from a program to make one step of progress on a list of goal terms to be proved
+### 20.5 An Abstract View: Proof Trees
+* A proof tree is defines as follows
+  * Two types of nodes, nothing nodes and solve nodes
+  * Each nothing node has no children
+  * Each solve node contains a list of terms. If the list is empty, the solve node is a leaf. Otherwise, the solve node has one child for each clause in the program, in order. If a given clause does not unify with the head of the list at that solve node, the corresponding child is a nothing node. Otherwise, the corresponding child is a solve node containing the list of terms formed from the current list of terms and the clause by applying the resolution step
+  * The root of the tree is a solve node containing the list of query terms
+  
