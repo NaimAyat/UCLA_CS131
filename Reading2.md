@@ -247,3 +247,6 @@ ancestor(X,Y) :-
 * Each occurence of `_` is bound independently of any other; put it where you need a variable that is never used
 ### 19.9 Negation and Failure
 * `not` keyword is the logical negation; it returns true if the predicate is false
+## Chapter 20: A Second Look at Prolog
+* Unification: pattern-matching technique
+* A substitution is a set of bindings for variables
