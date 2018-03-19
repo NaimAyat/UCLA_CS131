@@ -158,3 +158,22 @@ int[] a = null;
 * When objects of different classes have a method of the same name and type, it makes sense to be able to call that method in contexts where the exact class of the object is not known at compile time
 * Subclasses can define their own unique behaviors and yet share some of the same functionality of the parent class
 * Not knowing the exact class at compile time, the language system must defer the implementation decision until runtime. This is called *dynamic dispatch*. C++ offers it as an option; it is always used in Java and most OO languages.
+## Chapter 18: Parameters
+### 18.1 Introduction
+* Actual parameters: parameters passed at the point of a call
+* Formal parameters: the variables in the called method that correspond to actual parameters
+### 18.2 Correspondence
+* How does a language decide which formal parameters go with which actual parameters?
+  * In the simplest case, it is determined by their positioned in the parameter list, *positional parameters*. Languages: Java, ML, Prolog.
+  * Some languages offer additional parameter-passing features, like *keyword parameters*. In Ada: `DIVIDE(DIVIDEND => X, DIVISOR => Y);`. Others: Lisp, Dylan, Python, recent Fortran.
+* Some languages allow us to declare default values of parameters, like in C++: `int f(int a = 1, int b = 2)`
+* Some languages (C, C++, Perl, Python, Javascript) allow actual parameter lists of any length: `int printf(char *format, ...)`
+### 18.3 By Value
+* For by-value parameter passing, the formal parameter is just like a local variable in the activation record of the called method. The important difference: it is initialized using the value of the corresponding actual parameter, before the called method begins executing
+* The caller and callee have two independent variables with the same value. If the callee modifies the parameter variable, the effect is not visible to the caller.
+* When parameters are passed by value, changes to the formal parameter do not affect the corresponding actual parameter.
+### 18.4 By Result
+* A parameter passed by result is just like a local variable in the acivation record of the called method - it is uninitialized. After the called method finishes executing, the final value of the formal parameter is assigned to the corresponing actual parameter.
+* The caller and the callee use the same variable for the parameter. If the callee modifies the parameter variable, the effect is visible to the caller's variable.
+### 18.5 By Value-Result
+* The formal parameter is just like a local variable in the activation record of the called method. It is initialized using the value of the actual called parameter, before the called method begins executing. Then, after the called method finishes executing, the final value of the formal parameter is assigned to the actual parameter.
