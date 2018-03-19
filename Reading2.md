@@ -239,3 +239,7 @@ ancestor(X,Y) :-
 * `[1,2,3]` is the same as `.(1,.(2,.(3,[])))`
 * `|` denotes the tail of the list: `[1,2|X]` is the same as `.(1,.(2,X))`
 * `append(X,Y,Z)` takes three arguments: two lists to append, and the resulting list
+* `member(X,Y)` is provable if list `Y` contains element `X`
+* `select(X,Y,Z)` is provable if `Y` contains `X` and `Z` is the same as `Y` but with one instance of `X` removed
+* `nth0(X,Y,Z)` is provable if `X` is an integer, `Y` is a list, and `A` is the `X`th element of the list, indexed from 0
+* `length(X,Y)` provable if `X` is a list of length `Y`
