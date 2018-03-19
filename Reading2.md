@@ -267,3 +267,7 @@ ancestor(X,Y) :-
 * Any string encolsed in single quotes is a term in Prolog, like `Hello world` or `hello world`
 #### `assert` and `retract`
 * `assert(X)` adds the term X as a fact in the database, like `assert(green(light))`. `retract` does the opposite
+## Chapter 21: Cost Models
+* Suppose `X` is a Prolog list of 100 integers. Which is faster, adding a new element to the front of the list or rear? In other words, which is faster: `Y=[1|X]` or `append(X,[1],Y)`?
+  * Adding a new element to the fron tis faster in Prolog
+* Experienced programmers have *cost models* of their languages (mental model of the relative costs of various operations)
