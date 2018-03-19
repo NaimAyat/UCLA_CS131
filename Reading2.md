@@ -190,3 +190,22 @@ int[] a = null;
 * Passing parameters by need means that each actual parameter is evalueated in the caller's context, on the first use of the corresponding formal parameter. The value of the actual parameter is then cached, so that subsequent uses of the formal parameter do not cause reevaluation
 ### 18.10 Specification Issues
 * Are actual parameters always evaluated (eager evaluation) or evaluated only if the corresponding formal parameter is actually used (lazy evaluation)? ML uses eager evaluation.
+## Chapter 19: A First Look at Prolog
+### 19.2 Prolog Terms
+* Constant = *atom*
+* Any name beginning with an uppercase letter or an underscore = *variable*
+* Atom followed by a parenthesized, comma-separated list of terms = *compound term*
+* Pattern matching using Prolog terms is called *unification*
+  * Terms are said to unify if there is some way of binding their variables that makes them identical
+* Prolog language maintains a collection of facts and rules of inference. A prolog program is just a set of data. The simplest piece of data is a fact, which is a term followed by a period. Here is a prolog program of six facts:
+```
+parent(kim,holly).
+parent(marge,kim).
+parent(marge,kent).
+parent(esther,marge).
+parent(herb,marge).
+parent(herb,jean).
+```
+### 19.3 Getting Started with a Prolog Language System
+* Suppose the set of facts is stored in a file called relations. To load the data, do `consult(relations).`
+* Now, you can check what is true: `parent(marge,kent)` returns `true.`
