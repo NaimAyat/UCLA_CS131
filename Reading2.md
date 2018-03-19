@@ -275,3 +275,9 @@ ancestor(X,Y) :-
 * Prolog as two ways to express lists: `[1,2,3,4]` and `.(1,.(2,.(3,.(4,[]))))`. The latter suggests the underlying representation.
   * A list is a chain of pairs of pointers; the first pointer points to an element of the list, the second points to the rest of the list
   * Pairs of pointers used this way to implement a list are called *cons cells*, a compound term using the `.` predicate is a cons cell
+* Consing onto the front of a list always takes constant time
+* Extracting the head of a list always takes constant time
+* Extracting the tail of a list always takes constant time
+* When length is used like a function (when the first parameter is instantiated to a list and the second isn't), it always takes time proportional to the length of the list
+* When append is used like a function (when the first two parameters are instantiated to lists and the third isn't), it always takes time proportional to the length of its first parameter
+* Unifying lists, in the worst case, tkes time proportional to the size (not just the length) of the shorter list
