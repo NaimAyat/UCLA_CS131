@@ -210,3 +210,4 @@ parent(herb,jean).
 * Suppose the set of facts is stored in a file called relations. To load the data, do `consult(relations).`
 * Now, you can check what is true: `parent(marge,kent)` returns `true.`
 * You can also use a variable to get the system to find values that satisfy your query. For example, we use the variable `P` in `parent(P,jean)`, which returns `P = herb.`
+* Is someone their own parent? `parent(P, P).` returns `false.`
