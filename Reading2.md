@@ -254,3 +254,5 @@ ancestor(X,Y) :-
 * MGU (most general unifier): Prolog wants to bind variables only when necessary to prove the query
 ### 20.3 A Procedural View
 * `p :- q, r.` can be thought of a procedure; to prove a goal, unify it with `p`, then prove `q`, then prove `r`.
+### 20.4 An Implementational View
+* The basic step the interpreter uses is *resolution*; it applies one clause from a program to make one step of progress on a list of goal terms to be proved
