@@ -211,3 +211,17 @@ parent(herb,jean).
 * Now, you can check what is true: `parent(marge,kent)` returns `true.`
 * You can also use a variable to get the system to find values that satisfy your query. For example, we use the variable `P` in `parent(P,jean)`, which returns `P = herb.`
 * Is someone their own parent? `parent(P, P).` returns `false.`
+* Commas are treated as a logical conjunction. Asking `parent(marge,X), parent(X,holly).` returns `X = kim.`
+### 19.4 Rules
+```
+greatgrandparent(GGP,GGC) :-
+  parent(GGP, GP), parent(GP, P), parent(P, GGC).
+```
+* The *head* of the rule is followed by the `:-` token, followed by a comma-separated list of conditions of the rule, followed by a period.
+* Rules can be recursive:
+```
+ancestor(X,Y) :- parent(X,Y).
+ancestor(X,Y) :-
+  parent(Z,Y),
+  ancestor(X,Z).
+```
