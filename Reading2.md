@@ -319,7 +319,7 @@ ancestor(X,Y) :-
 #### Natural Semantics
 * Low-level definitions for operations
 * Conditions above the line, conclusion below: `(E1 -> v1   E2 -> v2) / (times(E1,E2) -> v1 * v2)`
-### 23.3 Language Two: Adding Variables
+* `(0 or more preconditions)/(expression -> result)`
 ### 23.5 Other Kinds of Formal Semantics
 #### Operational Semantics
 * Specifies step-by-step what happens when a program executes
