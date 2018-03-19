@@ -330,3 +330,7 @@ ancestor(X,Y) :-
 * Defines the semantics in a way that is useful for reasoning about assertions
 * Strongest postcondition `sp(P,S)`: the strongest assertion you can make about statement `S` given that assertion `P` is true before `S`
   * Converseley, the weakest postcondition `wp(S,Q)` is the minimum assertion the programmer must establish before executing statement `S` so `Q` will be true after `S`
+#### Denotational Semantics
+* Most mathematically elegant
+  * Each phrase of a program denotes some element of a mathematical domain (set)
+  * Larger phrases of a program are defined compositionally, by combining meanings of component phrases
