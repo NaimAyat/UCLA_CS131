@@ -289,3 +289,6 @@ ancestor(X,Y) :-
   * Works on goal terms from left to right
   * Tries rules from the database in order, trying to unify the head of each rule with the current goal term
   * Backtracks on failure; there may be more than one rule whose head unifies with a given goal term, and the system tries as many as necessary
+* Efficiency guideline: restrict early. Stop searching useless alternatives ASAP.
+### 21.5 A Cost Model for Arrays
+* Accessing array elements sequentially is faster than accessing them non-sequentially
