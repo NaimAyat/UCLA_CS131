@@ -265,3 +265,5 @@ ancestor(X,Y) :-
 ### 20.6 The Lighter Side of Prolog
 #### Quoted Atoms as Strings
 * Any string encolsed in single quotes is a term in Prolog, like `Hello world` or `hello world`
+#### `assert` and `retract`
+* `assert(X)` adds the term X as a fact in the database, like `assert(green(light))`. `retract` does the opposite
