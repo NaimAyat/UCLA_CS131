@@ -228,3 +228,11 @@ ancestor(X,Y) :-
 ### 19.5 The Two Faces of Prolog
 * Prolog is a declarative language
 * Automatic programming: the idea that computers automatically write their own problems, given a description of the problem to be solved
+### 19.7 Operators
+* `=` takes two parameters and is provable iff the predicates can be unified
+* Asking: `=(parent(adam,seth),parent(adam,X)).` returns `X = seth.`
+* The arithmetic operators have the usual precedence and associativity; `X = 1+2*3` is shorthand for the term `X = +(1,*(2,3))`. Asking either of these returns `X = 1+2*3`
+### 19.8 Lists
+* `[]` atom represents empty list
+* `.` predicate in prolog corresponds to `::` in ML
+* `1::[]` in ML is the same as `.(1,[])` in Prolog
