@@ -262,4 +262,6 @@ ancestor(X,Y) :-
   * Each nothing node has no children
   * Each solve node contains a list of terms. If the list is empty, the solve node is a leaf. Otherwise, the solve node has one child for each clause in the program, in order. If a given clause does not unify with the head of the list at that solve node, the corresponding child is a nothing node. Otherwise, the corresponding child is a solve node containing the list of terms formed from the current list of terms and the clause by applying the resolution step
   * The root of the tree is a solve node containing the list of query terms
-  
+### 20.6 The Lighter Side of Prolog
+#### Quoted Atoms as Strings
+* Any string encolsed in single quotes is a term in Prolog, like `Hello world` or `hello world`
