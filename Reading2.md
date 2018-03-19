@@ -174,6 +174,7 @@ int[] a = null;
 * When parameters are passed by value, changes to the formal parameter do not affect the corresponding actual parameter.
 ### 18.4 By Result
 * A parameter passed by result is just like a local variable in the acivation record of the called method - it is uninitialized. After the called method finishes executing, the final value of the formal parameter is assigned to the corresponing actual parameter.
-* The caller and the callee use the same variable for the parameter. If the callee modifies the parameter variable, the effect is visible to the caller's variable.
 ### 18.5 By Value-Result
 * The formal parameter is just like a local variable in the activation record of the called method. It is initialized using the value of the actual called parameter, before the called method begins executing. Then, after the called method finishes executing, the final value of the formal parameter is assigned to the actual parameter.
+### 18.6 By Reference
+* The caller and the callee use the same variable for the parameter. If the callee modifies the parameter variable, the effect is visible to the caller's variable. The formal parameter is an alias for the actual parameter - another name for the same memory location.
