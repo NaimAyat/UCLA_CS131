@@ -281,3 +281,11 @@ ancestor(X,Y) :-
 * When length is used like a function (when the first parameter is instantiated to a list and the second isn't), it always takes time proportional to the length of the list
 * When append is used like a function (when the first two parameters are instantiated to lists and the third isn't), it always takes time proportional to the length of its first parameter
 * Unifying lists, in the worst case, tkes time proportional to the size (not just the length) of the shorter list
+### 21.3 Cost Models for Funciton Calls
+* Tail calls are considerably faster than non-tail calls, and they take less memory space
+* When execution reaches the last condition in a rule for some predicate, and if there is no possibility of backtracking within that rule, then a Prolog compiler can apply a tail-call optimization
+### 21.4 A Cost Model for Prolog Search
+* A Prolog system
+  * Works on goal terms from left to right
+  * Tries rules from the database in order, trying to unify the head of each rule with the current goal term
+  * Backtracks on failure; there may be more than one rule whose head unifies with a given goal term, and the system tries as many as necessary
