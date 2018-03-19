@@ -148,3 +148,13 @@ int[] a = null;
   * Can a derived class have more than one base class (multiple inheritance)? Yes: C++, CLOS, Eiffel. No: Java, Smalltalk.
   * Must a derived class inherit all the methods and fields of the base class, or can it choose? All: Java. Choose: Sather.
   * Is there a common root to the inheritance hierarchy - a class from which all other classes inherit? Yes: Java, the class `Object`. No: C++.
+  * What happens when a derived class has a method or field definition with the same name and type as an inherited one? In Java, the derived class can sometimes override inherited definitions. However, a method in the base class can be declared `final`, meaning no overriding is permitted.
+  * Does a derived class inherit specification from the base class? In Java, a derived class inherits a collection of method obligations from the base class. 
+  * Does a derived class inherit membership in types from the base class? In Java, a derived class inherits membership in all types of the base class.
+* Prototype-based languages cannot have inheritance in the usual sense, since they do not have classes. The corresponding mechanism is called *delegation*. When an object gets a method call it cannot handle, it can delegate it to another object.
+#### Encapsulation
+* Without encapsulation, every part of a program is visible to every other part; this makes large programs extremely difficult to develop and maintain.
+#### Polymorphism
+* When objects of different classes have a method of the same name and type, it makes sense to be able to call that method in contexts where the exact class of the object is not known at compile time
+* Subclasses can define their own unique behaviors and yet share some of the same functionality of the parent class
+* Not knowing the exact class at compile time, the language system must defer the implementation decision until runtime. This is called *dynamic dispatch*. C++ offers it as an option; it is always used in Java and most OO languages.
