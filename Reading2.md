@@ -182,3 +182,4 @@ int[] a = null;
 ### 18.7 By Macro Expansion
 * Example in C: `#define MIN(X,Y) ((X) < (Y) > (X) : (Y))`. Call with `a = MIN(b,c)`
 * Although macros look and sometimes work like methods, they are not methods. Before a program is run or compiled, a pre-processing step replaces each use of the macro with a complete copy of the macro body, with the actual parameters substituted for the formal parameters.
+* *Capture*: in any program fragment, an occurence of a variable that is not statically bound within the fragment is *free*.
