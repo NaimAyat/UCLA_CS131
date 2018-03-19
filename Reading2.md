@@ -186,3 +186,5 @@ int[] a = null;
 * For passing parameters by macro expansion, the body of the macro is evaluated in the caller's context. Each actual parameter is evaluated on every use of the corresponding formal parameter, in the context of that occurence of the formal parameter (which is itself in the caller's context)
 ### 18.8 By Name
 * For passing parameters by name, each actual parameter is evaluated in the caller's context, on every use of the corresponding formal parameter.
+### 18.9 By Need
+* Passing parameters by need means that each actual parameter is evalueated in the caller's context, on the first use of the corresponding formal parameter. The value of the actual parameter is then cached, so that subsequent uses of the formal parameter do not cause reevaluation
