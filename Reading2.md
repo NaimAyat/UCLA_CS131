@@ -237,3 +237,4 @@ ancestor(X,Y) :-
 * `.` predicate in prolog corresponds to `::` in ML
 * `1::[]` in ML is the same as `.(1,[])` in Prolog
 * `[1,2,3]` is the same as `.(1,.(2,.(3,[])))`
+* `|` denotes the tail of the list: `[1,2|X]` is the same as `.(1,.(2,X))`
