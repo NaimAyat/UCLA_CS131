@@ -60,3 +60,62 @@ end;
 * For languages that do allow more than one activation of a function to be alive at once, you can allocate activation records dynamically. The natural behavior of a function calls and returns produces a stack of activation records. A new activation record is pushed when a function is called and popped when it returns. This works in C.
 * Languages that allow non-local references from nested function definitions need additional support. One way to handle this is with an additional field in the activation record - the nesting link. This is needed for Pascal, Ada, and ML.
 * For languages that allow references into activation records for activations that have returned, you need to be aware that activation records cannot necessarily be deallocated and reused when they are popped off the stack. This happens in languages like ML, when a function value persists after the function that created it has returned
+## Chapter 14: Memory Management
+### 14.2 Memory Model Using Java Arrays
+```
+int[] a = null;
+```
+* This declares `a` to be a reference to an array of integers and initializes it to `null`. To make `a` be a reference to an array, allocate and array and assign the reference to `a` like this: `a = new int[100]`
+  * This creates a new array of 100 integer values and stores a reference to the new array in `a`
+### 14.3 Stacks
+* Since modern languages allow recursion, we need to allocate activation records at runtime
+* Memory manager can take advantage of the stack order - the fact that the first activation record allocated will be the last one deallocated
+  * Store the postition of the previous top of the stack at the top of each activation record. Now, all we have to do when an activation record is finished is to pop it and reload the `top` value from the previous record
+  * Allocation and deallocation are nothing more than simple adjustments to the `top` address
+  * This efficiency depends on the fact that deallocation and allocation are restricted to stack order. In languages without that restriction, memory management becomes a more difficult problem
+### 14.4 Heaps
+* Now, considere unordered runtime memory allocation and deallocation. The program is free to allocate and deallocate blocks in any order
+  * A heap is a pool of blocks on memory, with an interface for unordered runtime memory allocation and deallocation
+* The `allocate` function takes an integer parameter - the number of words of memory to be allocated - and returns the address of a newly allocated block of at least that many words
+* The `deallocate` function takes the address of an allocated block - one of those addresses returned by prior calls to `allocate` and not yes deallocated - and frees up the block beginning at that address
+  * This is like C's `malloc` and `free` functions
+#### First-Fit Mechanism
+* Heap manager maintains a linked list of free blocks, initially containing one big free block
+* To allocate a block, the heap manager searches the free list for the first sufficiently larege free block. If there is extra space at the end of the block, the block is split and the unused portion at the upper end is returned to the free list. The requested portion at the lower end is allocated to the caller
+* To free a block, the heap manager returns it to the front of the free list
+#### Coalescing Free Blocks
+* The previous mechanism breaks big blocks into little blocks, but never reverses the process
+* We need to modify `deallocate` to make it coalese adjacent free blocks
+* The new `deallocate` method does not just put the free block on the head of the free list, it maintains the free list sorted in  increasing order of addresses. It finds the right insertion point in this list for the newly deallocated block, inserts it into the list, and merges it with the previous free block and with the following free block if it is adjacent
+#### Quick Lists and Delayed Coalescing
+* Small blocks tend to be allocated and deallocated more frequently than large ones
+* To improve the performance of a heap manager, have it maintain separate free lists for the popular small block sizes, called *quick lists*
+#### Fragmentation 
+* Problem: free blocks are not adjacent; the disk is fragmented
+#### Other Heap Mechanisms
+* A heap manager must decide a *placement* for every block allocated. When it sees a request to allocate a block, the allocator usually has many positions in memory to choose from. The simple mechanism of first-fit allocation is only one of the many ways to make that choice. Some use data structures such as balanced binary trees.
+* A heap manager usually implements block *splitting*; if it decides to allocate a block within a free region of memory that is larger than the requested size, it has more choices to make. It can allocate exactly the requested amount, leaving the rest as a free block. However, a heap manager can get better performance by doing less splitting.
+  * If the requested amount is nearly the same size as the free block, it makes sense to just go ahead and use the whole thing
+* Block *coalescing*: when adjacent blocks are free, the heap manager can decide to combine them into a single free block, but the heap manager gets better performance by doing less coalescing. If a small block is deallocated of a popular size, it will probably be needed again - it makes sense not to coalesce it
+### 14.5 Current Heap Links
+* *Current heap link*: memory location where a value is stored that the running program will use as a heap address
+* To trace current heap links:
+  1. Start with the root set, the set of memory locations all of the running program's variables, including all those statically allocated and those in activation records for activations that have not yet returned. Omit all those whose values obviously cannot be used as heap addresses.
+  2. For each memory location in the set, look at the allocated block it points to and add all the memory locations within that block, but omit those whose values obviously cannot be used as heap addresses. Repeat this until no new memory locations are found.
+* Tracing heap links yields three types of errors:
+  1. Exclusion errors: a memory location that actually is a current heap link is accidentally excluded from the set
+  2. Unused inclusion errors: a memory location is included in the set, but the program never actually uses the value stored there
+  3. Used inclusion errors: a memory location is included in the set, but the program uses the value stored there as something other than a heap addres; as an integer, for example
+* When we find something that might be used as a heap link we must include it, even though the program might not actually use it at all
+#### Heap Compaction
+* Some heap managers perform heap compaction: moving allocated blocks around without disturbing the running program. The block is simply copied to a new location, then it updates all the current heap links to the old block, making them point to the new location
+  * This eliminates fragmentation of the heap
+  * It is expensive, so it is usually only done as a last resort; for example, if some allocation is about to fail
+#### Garbage Collection
+* *Dangling pointer*: a pointer to a block that is no longer allocated
+  * Causes a memory leak
+* Garbage collection: heap manager finds the allocated block that the running program is no longer using and claims them automatically. Three basic techniques:
+  1. Mark-and-sweep: garbage collector traces current heap links and marks all the allocated blocks that are the targets of those links. In the sweep phase, the collecotr makes a pass over the heap, finding all blocks that did not get marked and adding them to the free list. Mark-and-sweep does not move allocated blocks; the heap remains fragmented after garbage collection. For this reason, they can tolerate both kinds of inclusion errors. Extra inclusions in the current heap simply cause some garbage blocks to be retained.
+     * Cons: Give uneven performance - usually good, with occasional long pauses while the heap manager collects garbage. For time-sensitive systems, this is unacceptable. *Incremental collectors* recover a little garbage at a time, while the program is running, instead of doing it all at once in response to some memory allocation
+  2. Copying collector: heap manager uses only half of its available memory at a time. When that half becomes full, it finds the current heap links and copies all the non-garbage blocks into the other half. It compacts as it goes, so in the new half all the allocated blocks are together and all the free space is in a single free block. Then it resumes normal allocation in the new half. When that half becomes full, it repeats the process, copying and compacting back into the other half. Copying collectors do move allocated blocks, so they are sensitive to inclusion errors.
+  3. Reference-conting collector: does not need to trace current heep links. Every allocated heap block includes a counter that keeps track of how many copies of its addresses there are. The language system maintains these reference counters, incrementing them when a free reference is copied, and decrementing them when a reference is discareded. When a reference counter becomes zero, that block is known to be garbage and can be freed. Reference-counting systems suffer from poor performance generally, since maintaining the reference counters adds overhead to simple pointer operations. They also cannot collect cycles of garbage.
