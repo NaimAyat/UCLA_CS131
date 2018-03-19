@@ -238,3 +238,4 @@ ancestor(X,Y) :-
 * `1::[]` in ML is the same as `.(1,[])` in Prolog
 * `[1,2,3]` is the same as `.(1,.(2,.(3,[])))`
 * `|` denotes the tail of the list: `[1,2|X]` is the same as `.(1,.(2,X))`
+* `append(X,Y,Z)` takes three arguments: two lists to append, and the resulting list
