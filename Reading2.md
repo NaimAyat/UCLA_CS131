@@ -119,3 +119,27 @@ int[] a = null;
      * Cons: Give uneven performance - usually good, with occasional long pauses while the heap manager collects garbage. For time-sensitive systems, this is unacceptable. *Incremental collectors* recover a little garbage at a time, while the program is running, instead of doing it all at once in response to some memory allocation
   2. Copying collector: heap manager uses only half of its available memory at a time. When that half becomes full, it finds the current heap links and copies all the non-garbage blocks into the other half. It compacts as it goes, so in the new half all the allocated blocks are together and all the free space is in a single free block. Then it resumes normal allocation in the new half. When that half becomes full, it repeats the process, copying and compacting back into the other half. Copying collectors do move allocated blocks, so they are sensitive to inclusion errors.
   3. Reference-conting collector: does not need to trace current heep links. Every allocated heap block includes a counter that keeps track of how many copies of its addresses there are. The language system maintains these reference counters, incrementing them when a free reference is copied, and decrementing them when a reference is discareded. When a reference counter becomes zero, that block is known to be garbage and can be freed. Reference-counting systems suffer from poor performance generally, since maintaining the reference counters adds overhead to simple pointer operations. They also cannot collect cycles of garbage.
+## Chapter 16: Object Orientation
+### 16.1 Introduction
+* Object-oriented programming is not the same as programming in an object-oriented language
+* Object-oriented languages are not all  like Java
+### 16.2 Object-Oriented Programming
+* You can program in an object-oriented style in virtually any language
+* You can use an object-oriented language in a non-object oriented way
+#### Object-Oriented ML
+* Objects implemented as functions
+* Curried functions: supplying parameters results in an object
+#### Non-Object-Oriented Java
+* Classes with no methods or constructors; all fields are public
+* Drawbacks: programming the same branching structure, over and over, is tedious and error-prone
+### 16.3 A Menagerie of Object-Oriented Language Features
+#### Classes
+* Classes group fields and methods that a set of object has. This is central to the description of an object - a bundle of data that knows how to do things to itself
+* A class is instantiable. That is, a running program can create as many objects of the class as it needs. A class contains the constructors that the program can use to allocate and initialize new objects of that class. A class is like a mold for objects. The cunstructors stamp out new objects using that mold.
+* A class is the unit of inheritance. A derived class inherits, as a group, the fields and methods of its base class.
+* In statically type checked languages, a class can serve as a type. Objects can have a class or superclass as their static type
+* Some languages, including Java, allow classes to include static fields and methods. Static fields have only one instance, not one per object. Static methods are called without an object of the class to operate on, so they can access static fields only
+* A class can serve as a labeled namespace. In some languages, a class can control the degree to which its contents are visible outside of the class
+#### Protoypes
+* A protype is just an objec tthat is copied to make other, similar objects
+* Prototype-based languages have constructs for creating objects from scratch and for making modified copies of existing objects
