@@ -236,3 +236,4 @@ ancestor(X,Y) :-
 * `[]` atom represents empty list
 * `.` predicate in prolog corresponds to `::` in ML
 * `1::[]` in ML is the same as `.(1,[])` in Prolog
+* `[1,2,3]` in ML is `.(1,.(2,.(3,[])))` in Prolog
