@@ -303,3 +303,30 @@ ancestor(X,Y) :-
 * `is`: The goal `X is Y` evaluates `Y` and unifies the result with `X`
 * `=`: The goal `X=Y` unifies `X` and `Y`. Unification does not evaluate numeric expressions at all, but only pays attention to term structure.
 * `=:=`: `X=:=Y` evaluates both `X` and `Y` and succeeds iff they are numerically equal.
+## Chapter 23: Formal Semantics
+### 23.2 Language One
+* Let's define a grammar:
+```
+<exp> ::= <exp> + <mulexp> | <mulexp>
+<mulexp> ::= <mulexp> * <rootexp> | <rootexp>
+<rootexp> ::= (<exp>) | <constant>
+```
+* Once we construct the parse tree, most language systems only retain a simplified tree structure, the abstract syntax tree (AST)
+  * The AST records the operation and the operands, but not the non-terminal symbols
+#### Interpreters
+* Give an interpreter for the ASTs of the language
+* This isn't the same system-to system, so you can't say "the semantics of Prolog are as the interpreter says they are" since it varies per machine
+#### Natural Semantics
+* Low-level definitions for operations
+* Conditions above the line, conclusion below: `(E1 -> v1   E2 -> v2) / (times(E1,E2) -> v1 * v2)`
+### 23.3 Language Two: Adding Variables
+### 23.5 Other Kinds of Formal Semantics
+#### Operational Semantics
+* Specifies step-by-step what happens when a program executes
+* Natural semantics defines a relation between programs and their final outcomes
+  * Defines interpretation as one big step
+* Structural operational semantics specifies a computation as a series of smaller steps
+#### Axiomatic Semantics
+* Defines the semantics in a way that is useful for reasoning about assertions
+* Strongest postcondition `sp(P,S)`: the strongest assertion you can make about statement `S` given that assertion `P` is true before `S`
+  * Converseley, the weakest postcondition `wp(S,Q)` is the minimum assertion the programmer must establish before executing statement `S` so `Q` will be true after `S`
