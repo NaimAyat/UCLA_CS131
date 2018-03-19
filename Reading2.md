@@ -271,3 +271,7 @@ ancestor(X,Y) :-
 * Suppose `X` is a Prolog list of 100 integers. Which is faster, adding a new element to the front of the list or rear? In other words, which is faster: `Y=[1|X]` or `append(X,[1],Y)`?
   * Adding a new element to the fron tis faster in Prolog
 * Experienced programmers have *cost models* of their languages (mental model of the relative costs of various operations)
+### 21.2 Cost Models for Lists 
+* Prolog as two ways to express lists: `[1,2,3,4]` and `.(1,.(2,.(3,.(4,[]))))`. The latter suggests the underlying representation.
+  * A list is a chain of pairs of pointers; the first pointer points to an element of the list, the second points to the rest of the list
+  * Pairs of pointers used this way to implement a list are called *cons cells*, a compound term using the `.` predicate is a cons cell
