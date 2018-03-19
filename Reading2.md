@@ -248,6 +248,9 @@ ancestor(X,Y) :-
 ### 19.9 Negation and Failure
 * `not` keyword is the logical negation; it returns true if the predicate is false
 ## Chapter 20: A Second Look at Prolog
+### 20.2 Unification
 * Unification: pattern-matching technique
 * A substitution is a set of bindings for variables
 * MGU (most general unifier): Prolog wants to bind variables only when necessary to prove the query
+### 20.3 A Procedural View
+* `p :- q, r.` can be thought of a procedure; to prove a goal, unify it with `p`, then prove `q`, then prove `r`.
