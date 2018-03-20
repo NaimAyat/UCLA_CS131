@@ -174,11 +174,32 @@ int[] a = null;
 * When parameters are passed by value, changes to the formal parameter do not affect the corresponding actual parameter.
 ### 18.4 By Result
 * A parameter passed by result is just like a local variable in the acivation record of the called method - it is uninitialized. After the called method finishes executing, the final value of the formal parameter is assigned to the corresponing actual parameter.
+* Cons: 
+  * If a value is moved, time and space
+  * In both cases, order dependence may be a problem
+    ```
+    procedure sub1(y: int, z: int);
+        ...
+    sub1(x, x);
+    ```
+  * Value of x in the caller depends on order of assignments at the return
 ### 18.5 By Value-Result
 * The formal parameter is just like a local variable in the activation record of the called method. It is initialized using the value of the actual called parameter, before the called method begins executing. Then, after the called method finishes executing, the final value of the formal parameter is assigned to the actual parameter.
 ### 18.6 By Reference
 * The caller and the callee use the same variable for the parameter. If the callee modifies the parameter variable, the effect is visible to the caller's variable. The formal parameter is an alias for the actual parameter - another name for the same memory location.
 * Two different expressions that have the same lvalue (memory location) are *aliases* of each other
+* Pros: 
+  * Strong non-null guarantee. A function taking in a reference can be sure that the input is non-null. Hence null check need not be (and cannot be) made.
+  * Passing parameters by const reference for functions with read only requirements help in maintaining the readability, ensuring a strong compile time contract and  allowing the flexibility of calling a function with a compile time constant value
+* Cons: 
+  * Readability. A person reading the code has no way of knowing that the value can be modified in the function. For eg: saying `readNextValue(inputBuffer, &x)` is more explicit than `readNextValue(inputBuffer, x)`
+  * Passing by reference makes the function not Pure theoretically and in many cases practically. Pure functions have the benefits of being highly parallelized, more testable and less prone to bugs in general.
+  * Lifetime guarantee is a big issue with references (as well as pointers). This becomes specially dangerous when lambdas and multi-threaded programs are involved. eg:
+    ```
+    bool flag = false;
+    auto f = [&]() { while(process(Data)) if (condition) flag= true; }
+    return f;
+    ```
 ### 18.7 By Macro Expansion
 * Example in C: `#define MIN(X,Y) ((X) < (Y) > (X) : (Y))`. Call with `a = MIN(b,c)`
 * Although macros look and sometimes work like methods, they are not methods. Before a program is run or compiled, a pre-processing step replaces each use of the macro with a complete copy of the macro body, with the actual parameters substituted for the formal parameters.
@@ -186,6 +207,7 @@ int[] a = null;
 * For passing parameters by macro expansion, the body of the macro is evaluated in the caller's context. Each actual parameter is evaluated on every use of the corresponding formal parameter, in the context of that occurence of the formal parameter (which is itself in the caller's context)
 ### 18.8 By Name
 * For passing parameters by name, each actual parameter is evaluated in the caller's context, on every use of the corresponding formal parameter.
+* Same as by reference, but evaluated lazily - only when parameter is actually used
 ### 18.9 By Need
 * Passing parameters by need means that each actual parameter is evalueated in the caller's context, on the first use of the corresponding formal parameter. The value of the actual parameter is then cached, so that subsequent uses of the formal parameter do not cause reevaluation
 ### 18.10 Specification Issues
