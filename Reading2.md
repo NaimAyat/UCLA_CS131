@@ -380,6 +380,9 @@ ancestor(X,Y) :-
   * Larger phrases of a program are defined compositionally, by combining meanings of component phrases
 ## Misc.
 ### Java Pros
+* Multi-platform, as it is often run using a virtual machine (JVM)
+* Relatively easy to learn the basics.
+* Practically no memory management code to be written by the programmer (no malloc, no free). A garbage collector does the work of deleting useless data.
 * The syntax is familiar to the myriad programmers that know any other C based language.
 * Java (the platform) has a very large and standard class library, some parts of which are very well written.
 * Java provides a platform for behavioral transfer from one address space to another. This is particularly evident in the dynamic class loading mechanisms of RMI (Remote Method Invocation).
@@ -397,6 +400,10 @@ ancestor(X,Y) :-
 * No FragileBinaryInterfaceProblem.
 * Many standard interfaces defined in the standard library, which would have been vendor/OS specifc otherwise, helps a lot in achieving portability and ease integration/selection of 3rd party libraries. E.g. JDBC, JMS, JCE, JAI, serial I/O, JAXP, JNDI, etc. Some have * correspondance in other languages (e.g. ODBC) but not all.
 ### Java Cons
+* No generic data structure
+* Exception management
+* No true enumeration types
+* Impossibility to use multiple inheritance
 * Much of the Java code as written by experienced coders turns out to be boilerplate. This has led to the charge that Java code is object-oriented Cobol.
 * If you dislike OOP or used mixed paradigms, the only way to write functions is to make them class methods.
 * Some people think the class libraries are poorly written.
@@ -418,3 +425,15 @@ ancestor(X,Y) :-
 * No generic programming means no StronglyTypedCollections unless you write 'em yourself one at a time.
 * Immutable types are a poor substitute for restricted references.
 * Difficult to blur distinction between class and object when desired, which increases the need/want for HOF's.
+### C++ Pros
+* Small standard library: the standard library of C++ is small compared to other languages like Java, allowing the programmer to do more with less restrictions.
+* Speed: Because it is compiled, C++ gains a lot of speed.
+* C language can be considered as a subset of C++ : most C code will be compilable by a C++ compiler.
+* Powerful: Because C++ does not require a special runtime to be installed for it to run, any kind of program can be created, all the way down to low-level systems programming up to complicated GUIs.
+* Multiple inheritance is supported
+* Countless libraries and fast implementations (Boost, for example) or most used algorithms. You can use C standard library in C++ but not the reverse. 
+* Windows OSes have been written with this language, along with C and Assembly. 
+### C++ Cons
+* Unsafe: the standard allows for many things that can cause unexpected behavior. This allows the programmer to do more, but also forces them to do more. It does no boundary checks on arrays, and allows for improper type conversion, making it very for someone who is inexperienced to corrupt memory. This is an issue that can be very hard to debug.
+* Little memory management: C++ does very little memory management, forcing the programmer to do most of it themselves.
+* Unstandardized higher-level features: Common program features such as GUIs, networking, and threading are dependent on operating system, forcing programmers to either make multiple versions of a program or include outside libraries that have already done so. The newest standard has added some standardization for threads, but it still has a long way to go compared to languages like Java.
