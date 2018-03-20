@@ -185,6 +185,27 @@ int[] a = null;
   * Value of x in the caller depends on order of assignments at the return
 ### 18.5 By Value-Result
 * The formal parameter is just like a local variable in the activation record of the called method. It is initialized using the value of the actual called parameter, before the called method begins executing. Then, after the called method finishes executing, the final value of the formal parameter is assigned to the actual parameter.
+* Pro: Pass-by-value-result is more efficient in partitioned memory where a Pass-by-Reference could refer to a distant segment or page, causing a page fault.  Similarly if memory is accessible through a network, it would necessitate a delay for network access.
+* Con: Concurrent execution could give unpredictable results.  Using Pass-by-Reference could end up giving values over some limit (see ticket sellers race-condition example).  Using Pass-by-Value-Result could end up with an invalid value, but it would always be less than the limit.
+* Consider also the following example, where Pass-by-Value-Result differs from Pass-by-Reference:
+  ```
+  PROGRAM
+     VAR i,j: INTEGER;
+
+
+     PROCEDURE foo(x,y)
+     BEGIN
+        i:=y
+     END;
+
+
+  BEGIN
+     i:= 2; j:= 3;
+     foo( i,j)
+  END
+  ```
+  * In Pass-by-Value-Result, x is a synonym for i on the call, but the value of x is never changed, so the changed value of i is restored to the original value when returning from the function.
+  * In Pass-by-Reference the change to i is kept back in the main program.
 ### 18.6 By Reference
 * The caller and the callee use the same variable for the parameter. If the callee modifies the parameter variable, the effect is visible to the caller's variable. The formal parameter is an alias for the actual parameter - another name for the same memory location.
 * Two different expressions that have the same lvalue (memory location) are *aliases* of each other
