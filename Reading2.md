@@ -43,7 +43,7 @@ end;
 * Since activation records are now dynamically allocated, their addresses can't be known at compile time. Instead a machine register is dedicated to this purpose at runtime. When a function returns, two addresses are important now:
   1. The address of the machine code to return to in the calling function
   2. The address of the activation record that function was using
-### 12.6 Handling Nexted Function Definitions
+### 12.6 Handling Nested Function Definitions
 * Dynamic allocation of activation records is enough for C, but not for languages like Pascal and ML, which allow nested function definitions with non-local references
 * Address of the most recent activation record for the function within which the function's definition is nested = *nesting link*
   * When calling a top-level function, nesting link for the called activation is set to null
