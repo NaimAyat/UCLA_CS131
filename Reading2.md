@@ -172,6 +172,7 @@ int[] a = null;
 * For by-value parameter passing, the formal parameter is just like a local variable in the activation record of the called method. The important difference: it is initialized using the value of the corresponding actual parameter, before the called method begins executing
 * The caller and callee have two independent variables with the same value. If the callee modifies the parameter variable, the effect is not visible to the caller.
 * When parameters are passed by value, changes to the formal parameter do not affect the corresponding actual parameter.
+* Pro: If we are building multi threaded application, then we dont have to worry of objects getting modified by other threads. In distributed application pass by value can save the over network overhead to keep the objects in sync.
 ### 18.4 By Result
 * A parameter passed by result is just like a local variable in the acivation record of the called method - it is uninitialized. After the called method finishes executing, the final value of the formal parameter is assigned to the corresponing actual parameter.
 * Cons: 
