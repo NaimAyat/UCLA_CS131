@@ -400,6 +400,7 @@ ancestor(X,Y) :-
 * No FragileBinaryInterfaceProblem.
 * Many standard interfaces defined in the standard library, which would have been vendor/OS specifc otherwise, helps a lot in achieving portability and ease integration/selection of 3rd party libraries. E.g. JDBC, JMS, JCE, JAI, serial I/O, JAXP, JNDI, etc. Some have * correspondance in other languages (e.g. ODBC) but not all.
 ### Java Cons
+* Java implementations typically use a two-step compilation process. Java source code is compiled down to bytecode by the Java compiler. The bytecode is executed by a Java Virtual Machine (JVM). Modern JVMs use a technique called Just-in-Time (JIT) compilation to compile the bytecode to native instructions understood by hardware CPU on the fly at runtime.
 * No generic data structure
 * Exception management
 * No true enumeration types
@@ -437,3 +438,19 @@ ancestor(X,Y) :-
 * Unsafe: the standard allows for many things that can cause unexpected behavior. This allows the programmer to do more, but also forces them to do more. It does no boundary checks on arrays, and allows for improper type conversion, making it very for someone who is inexperienced to corrupt memory. This is an issue that can be very hard to debug.
 * Little memory management: C++ does very little memory management, forcing the programmer to do most of it themselves.
 * Unstandardized higher-level features: Common program features such as GUIs, networking, and threading are dependent on operating system, forcing programmers to either make multiple versions of a program or include outside libraries that have already done so. The newest standard has added some standardization for threads, but it still has a long way to go compared to languages like Java.
+### Python Pros
+* Python is easy to learn for even a novice developer. Its code is easy to read and you can do a lot of things just by looking at it. Also, you can execute a lot of complex functionalities with ease, thanks to the standard library.
+* Supports multiple systems and platforms.
+* Object Oriented Programming-driven.
+* With the introduction of Raspberry Pi, a card sized microcomputer, Python has expanded its reach to unprecedented heights. Developers can now build cameras, radios and games with ease. So, learning Python could open new avenues for you to create some out-of-the box gadgets.
+* Python has a plethora of frameworks that make web programming very flexible.
+* Gives rise to quick development by using less code. Even a small team can handle Python effectively.
+* Allows to scale even the most complex applications with ease.
+* A large number of resources are available for Python.
+### Python Cons
+* Python is slow (interpreted)
+* Python is not a very good language for mobile development.
+* Python is not a good choice for memory intensive tasks.
+* It's near impossible to build a high-graphic 3D game using Python.
+* Has limitations with database access.
+* Python is not good for multi-processor/multi-core work.
