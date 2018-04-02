@@ -1,0 +1,67 @@
+Assignment Part 1:
+
+The first component of hw2.ml, convert_grammar, is a trivial function which 
+serves to convert Homework 1-style grammars to Homework 2-style grammars as 
+defined by the spec. To accomplish this, we keep the first part of the 
+two-tuple from gram1 and recursively construct the second part by searching 
+for each right-hand-side that corresponds to the current left-hand-side. 
+We then iterate down the grammar until the conversion is complete.
+
+Assignment Part 2: 
+
+The main portion of hw2.ml, parse_prefix, is supported by three embedded 
+recursive functions:
+
+    1) get_node
+    2) derive_phrase
+    3) matcher
+
+The first function, get_node, serves to find the left-most node in the parse 
+tree of right-hand-side grammar elements. In other words, it searches for a 
+prefix that corresponds to a nonterminal symbol of a grammar. If get_node
+fails to find a matching prefix, we move on the the subsequent rule's 
+right-hand-side. Using the information provided by get_node, therefore, 
+derive_phrase can then determine the corresponding leftmost derivation. 
+Finally, the matcher compares the result of derive_phrase to an arbitrary 
+two-tuple in an attempt to yield a fragment. If a match is found, it returns 
+the same two-tuple. Otherwise, the entire process repeats (in order of the 
+grammar provided) until there are no more rules remaining in the 
+right-hand-side of the grammar.
+
+Finally, parse_prefix returns a matcher for the grammar; more specifically,
+it returns the first acceptable match of a prefix of a fragment as determined
+by the aforementioned three functions. 
+
+
+Development Issues:
+
+I solved this assigment using the "divide-and-conquer" method as suggested by
+Professor Eggert. By assessing each unique problem in the spec individually,
+I was able to develop get_node and derive_phrase; then, I tied the two parts
+together to create a functional matcher in the most concise way I saw possible.
+At first, I hoped to keep each function separate (as opposed to the embedded
+current style) for easier reading. However, I found that to require a
+relatively sizeable amount of additional code. In the end, I decided to favor
+brevity. 
+
+Another problem stemmed from my initial intuition to treat this assigment as
+a search problem, similar to the majority of functions in Homework 1. However,
+I quickly realized that this was not a sophisticated enough approach; the only
+way to solve the problem (in my mind) was to create multiple recursive 
+functions that call one another.
+
+
+Weaknesses:
+
+The largest shortcoming of parse_prefix is that it only supports prefix
+expansion (expansion from the left-hand-side). Therefore, if we wanted
+right-associative parsing, the entire assigment would have to be rewritten.
+
+Moreover, hw2.ml does not take blind alleys into consideration. Without a 
+function like "filter_blind_alleys" from Homework 1, it is entirely possible
+for this program to get stuck in an infinite loop caused by a blind alley.
+
+Finally, hw2.ml has no method of addressing ambiguous grammars. Although this
+is more a shortcoming of the grammar itself rather than one of the program, it
+is always preferable to implement a protocol to address any possible grammar
+ambiguities.
